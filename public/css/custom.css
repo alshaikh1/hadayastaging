@@ -1,0 +1,109 @@
+body, * {font-family: 'Tajawal', sans-serif;}
+
+body {direction:rtl}
+#testimonials, #case, #support {direction:ltr;}
+/** ADD YOUR AWESOME CODES HERE **/
+
+.first-section {
+	background-image:url('../images/parallax_12.jpg');	
+}
+
+.topnavbar {background: #ccc; padding: 3px 10px;overflow:hidden;}
+
+.contentbox {
+	margin-top: 200px;
+	margin-bottom: 50px;
+}
+
+.main { padding: 200px 0px 0px 0px;}
+
+.buybtn {
+	margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+.footer-links li {padding-bottom:0;}
+body.seo_version .copyrights {padding:15px 0;}
+.productslist {margin-bottom: 25px; }
+
+
+#map {
+        height: 250px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+}
+
+.header_style_01 .navbar-default .navbar-nav > li a.active, .header_style_01 .navbar-default .navbar-nav > li a:hover {background-color: #685281;}
+
+.padd15 {padding:0 15px 15px 0;}
+.padding15 {padding:15px;}
+.error {color:#aa0000}
+/*.contact_form .form-control {margin-bottom:15px;}*/
+.row.padd15 {margin-right:0; margin-left:0}
+.martop15 {margin-top:15px;}
+body.seo_version .app_iphone_02 {left:0% !important}
+
+.contact_form .list-group {margin-bottom:10px; text-align:right;}
+.list-group-item>.badge {float:left}
+.list-group h4 {padding:0;}
+.list-group-item {padding:15px;}
+.pricing-table {padding:20px;}
+.pricing-table-text {border-bottom:0}
+th {text-align:right}
+.clearboth {clear:both}
+.tab-pane {padding-top:25px;}
+.nav-tabs>li {float:right}
+.contact_form .form-control {height:45px !important}
+
+.howto .row {margin-top: 20px; margin-bottom:20px; box-radius: 5px; padding: 25px;}
+.howto .row:nth-child(odd) {background: #f7f7f7;}
+.howto .row:last-child {background:#fff;}
+.howto .stepnumber {
+	color:#685281;
+	font-size: 65px;
+	opacity: .7;
+}
+.howto .row a {margin:0 auto; width: 50%;}
+.howto .row img {box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1); margin:0 auto;}
+
+
+.checkbox input[type=checkbox] { position: relative; margin-left:0;}
+.section-title p.lead {direction:rtl;}
+.pagination {direction:rtl; margin: 0 auto;}
+.pagination>li {float:right;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background:#BAC63E; border-color:#BAC63E;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+	border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+	border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.post-media img {width:80%; margin: 0 auto;}
+.modalimg img {margin: 0 auto;}
+
+body.seo_version .seo-services img {padding:5px}
+.greencolor {color:#685281}
+h4.modal-title {position: static; padding:0;}
+.testi-meta {font-size:25px; text-align: center; direction:rtl; margin-top:0;}
+.testimonials .section-title {margin-bottom:20px;}
+
+@media (max-width: 768px) {
+	.productslist {margin-bottom: 20px;}
+	.service-widget {padding:0 15px;}
+	body.seo_version .btn-light.ban-btn {width:100%;margin-bottom:10px;}
+}
+@media (min-width: 768px) {
+	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 { float:right;}
+	form .service-widget {min-height:412px; max-height:412px;}
+	.navbar-header {float:right}
+	.navbar-nav>li {float: right; margin-right:10px;}	
+}
