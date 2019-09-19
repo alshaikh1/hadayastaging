@@ -12,7 +12,7 @@
     
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content=""> 
 	<meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Site Icons -->
     <link rel="shortcut icon" href="{{ secure_asset('images/favicon.ico') }}" type="image/x-icon" />
