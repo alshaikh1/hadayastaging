@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="{{ secure_asset('images/favicon.ico') }}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{{ secure_asset('images/apple-touch-icon.png') }}">
 
-    <title>Ribbonate - {{ $title }}</title>
+    <title>Ribbonate</title>
 	
 
     <!-- Styles -->
