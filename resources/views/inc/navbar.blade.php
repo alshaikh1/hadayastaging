@@ -4,7 +4,7 @@
 					<ul class="navbar-nav ml-auto">
 					
 					<li class="nav-item">
-                        <a class="nav-link" href="{{ route('cart') }}">View Cart</a>
+                        <a class="nav-link" href="{{ secure_url('/cart') }}">View Cart</a>
                     </li>
 					
                 <!-- Authentication Links -->
