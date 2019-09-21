@@ -43,6 +43,7 @@ class PagesController extends Controller
 	public function addtocart(Request $request, $id){
         $title = 'اضافة مناسبة';
 		$msg = 'تمت الاضافة بنجاح';
+		$Products = DB::table('hd_products')->get();
 		$request->session()->push('cart', $id);
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('msg', $msg);
     }
