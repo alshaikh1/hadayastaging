@@ -50,9 +50,9 @@ class PagesController extends Controller
 	
 	public function viewcart(Request $request){
         $title = 'سلة';
-		$cart = $request->session()->get('cart', $id);
+		dd($request->session()->get('cart', $id));
 		
-		return ('pages.viewcart')->with('title', $title)->with('cart', $cart);
+		//return ('pages.viewcart')->with('title', $title)->with('cart', $cart);
 		
     }
 	
