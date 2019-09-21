@@ -7,6 +7,8 @@
 		<p class="lead">اختر الهدايا التي ترغب بها</p>
 	</div>
 	
+	<div class="alert alert-success" role="alert">{{ $msg }}}</div>
+	
 	<div class="container">
 		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/occasionconfirmation') }}" method="POST" id="formvalid">
 		{{ csrf_field() }}

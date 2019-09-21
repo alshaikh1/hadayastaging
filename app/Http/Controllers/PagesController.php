@@ -40,14 +40,16 @@ class PagesController extends Controller
     }
 	
 	public function addtocart(Request $request, $id){
-        $title = 'اضافة مناسبة';		
+        $title = 'اضافة مناسبة';
+		$msg = 'تمت الاضافة بنجاح';
 		$request->session()->push('cart', $id);
-		return ('added to cart');
+		return view('pages.add')->with('title', $title)->with('msg', $msg);
     }
 	
 	public function viewcart(Request $request){
         $title = 'سلة';
-		dd($request->session())->get('cart');
+		$cart = $request->session()->push('cart', $id);
+		return ('pages.viewcart')->with('title', $title)->with('cart', $cart);
     }
 	
 	
