@@ -2,6 +2,11 @@
 	<div class="container">
 				<div>
 					<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+                        <a class="nav-link" href="{{ route('cart') }}">View Cart</a>
+                    </li>
+					
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

@@ -45,6 +45,14 @@ class PagesController extends Controller
 		return ('added to cart');
     }
 	
+	public function viewcart(Request $request){
+        $title = 'سلة';
+		dd($request->session())->get('cart');
+    }
+	
+	
+	
+	
 	
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';

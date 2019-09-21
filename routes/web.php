@@ -49,6 +49,7 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/addtocart/{id}', 'PagesController@addtocart');
+Route::get('/cart', 'PagesController@viewcart');
 
 Auth::routes();
 
