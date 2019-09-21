@@ -111,7 +111,7 @@
 										<input type="checkbox" id="addproduct{{ $Product->id }}" value="{{ $Product->id }}" name="addproductcheckbox[]"> اضافة
 									</label>
 									
-									<button type="button" href="{{ secure_url('/addtocart/'.$Product->id) }}">
+									<a class="btn" href="{{ secure_url('/addtocart/'.$Product->id) }}">add me</a>
 									
 								</div>
 							<!-- end service -->
