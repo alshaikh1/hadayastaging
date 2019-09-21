@@ -44,7 +44,7 @@ class PagesController extends Controller
         $title = 'اضافة مناسبة';
 		$msg = 'تمت الاضافة بنجاح';
 		$request->session()->push('cart', $id);
-		return view('pages.add')->with('title', $title)->with('msg', $msg);
+		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('msg', $msg);
     }
 	
 	public function viewcart(Request $request){
