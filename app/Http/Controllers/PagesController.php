@@ -39,6 +39,13 @@ class PagesController extends Controller
         return view('pages.add', ['Products' => $Products])->with('title', $title);
     }
 	
+	public function addtocart(Request $request, $id){
+        $title = 'اضافة مناسبة';		
+		$request->session()->push('cart', $id);
+		return ('added to cart');
+    }
+	
+	
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';
 		
