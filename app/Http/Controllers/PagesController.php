@@ -44,7 +44,14 @@ class PagesController extends Controller
         $title = 'اضافة مناسبة';
 		$msg = 'تمت الاضافة بنجاح';
 		$Products = DB::table('hd_products')->get();
-		$request->session()->push('cart', $id);
+		$cart = Session::get('cart');
+		$cart[$product[0]->id] = array(
+        "id" => $product[0]->id,
+        "productname" => $product[0]->productname,
+	);
+			
+		
+		$request->session()->push('cart', $cart);
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('msg', $msg);
     }
 	
