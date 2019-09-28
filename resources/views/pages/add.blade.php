@@ -46,10 +46,8 @@
 								<h4>مقدم من {{ $Product->merchantname }}<h4>
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>					
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
-								<div class="checkbox">
-									<label class="btn">
-										<input type="checkbox" id="addproduct{{ $Product->id }}" value="{{ $Product->id }}" name="addproductcheckbox[]"> اضافة
-									</label>
+								<div class="martop15">
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 							<!-- end service -->
 							</div>
@@ -109,10 +107,8 @@
 								<h4>مقدم من {{ $Product->merchantname }}<h4>
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
-								<div class="checkbox">
-									<label class="btn">
-										<input type="checkbox" id="addproduct{{ $Product->id }}" value="{{ $Product->id }}" name="addproductcheckbox[]"> اضافة
-									</label>
+								<div class="martop15">
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 							<!-- end service -->
 							</div>
