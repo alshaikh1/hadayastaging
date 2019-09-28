@@ -12,7 +12,7 @@
 	<div class="container">
 		@include('inc.messages')
 
-		<div class="row">
+		<div class="row addproducts">
 			
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
