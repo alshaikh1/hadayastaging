@@ -112,7 +112,7 @@
 									</label>
 								</div>
 								
-								<div><button type="submit" class="btn">اضف الى السلة</button>
+								<div><button type="submit" class="btn">اضف الى السلة</button></div>
 								
 								
 							<!-- end service -->
