@@ -22,15 +22,18 @@
 						</tr>
 					</thead>
 					<tbody>
-					@foreach($Products as $Product)
+					
+					@if(session('cart'))
+						@foreach(session('cart') as $id => $details)
 						<tr>
-							<td>{{ $Product->productname }}</td>
-							<td>{{ $Product->productdescription }}</td>
-							<td>{{ $Product->productprice }} دينار</td>
-							<td>{{ $Product->merchantname }}</td>
+							<td>{{ $details['name'] }}</td>
+							<td>{{ $details['description'] }}</td>
+							<td>{{ $details['price'] }} دينار</td>							
+							<td>{{ $details['merchant'] }}</td>
 							<td></td>
 						</tr>
-					@endforeach
+						@endforeach
+					@endif
 					</tbody>
 				</table>
 			</div>		
