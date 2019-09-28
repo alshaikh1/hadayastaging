@@ -18,7 +18,7 @@
 							<th class="text-right">الوصف</th>
 							<th class="text-right">السعر</th>
 							<th class="text-right">المصدر</th>
-							<th class="text-right">حذف</th>
+							<th class="text-right">الكمية</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -30,7 +30,7 @@
 							<td>{{ $details['description'] }}</td>
 							<td>{{ $details['price'] }} دينار</td>							
 							<td>{{ $details['merchant'] }}</td>
-							<td></td>
+							<td>{{ $details['quantity'] }}</td>
 						</tr>
 						@endforeach
 					@endif
