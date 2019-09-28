@@ -230,12 +230,53 @@ class PagesController extends Controller
         return view('pages.viewcart')->with('title', $title);
     }
 	
-	public function addToCart(Request $request){
-		$checkedProducts = $request->addtocartbtn;
-		dd($checkedProducts);
-        $title = 'اضافة مناسبة';
-		$Products = DB::table('hd_products')->get();
-        return view('pages.add', ['Products' => $Products])->with('title', $title);
+	public function addToCart($id){
+		
+		$title = 'اضافة مناسبة';
+		
+		$cart = session()->get('cart');
+		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->get();
+        // if cart is empty then this the first product
+		if(!$cart) {
+ 
+			$cart = [
+					$id => [
+						"name" => $Product->productname,
+						"price" => $Product->productprice,
+						"description" => $Product->productdescription,
+						"merchant" => $Product->merchantname
+					]
+			];
+ 
+			session()->put('cart', $cart);
+ 
+			return redirect()->back()->with('success', 'Product added to cart successfully!');
+		}
+ 
+        // if cart not empty then check if this product exist then increment quantity
+		if(isset($cart[$id])) {
+ 
+			$cart[$id]['quantity']++;
+ 
+			session()->put('cart', $cart);
+ 
+			return redirect()->back()->with('success', 'Product added to cart successfully!');
+ 
+		}
+ 
+        // if item not exist in cart then add to cart with quantity = 1
+		$cart[$id] = [
+			"name" => $Product->productname,
+			"price" => $Product->productprice,
+			"description" => $Product->productdescription,
+			"merchant" => $Product->merchantname
+		];
+ 
+		session()->put('cart', $cart);
+ 
+		return redirect()->back()->with('success', 'Product added to cart successfully!');
+		//return view('pages.add', ['Products' => $Products])->with('title', $title);
+        
     }
 	
 	

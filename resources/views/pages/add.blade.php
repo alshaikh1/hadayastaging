@@ -112,8 +112,10 @@
 									</label>
 								</div>
 								
-								<div><button type="submit" class="btn" name="addtocartbtn[]" id="addtocart{{ $Product->id }}">اضف الى السلة</button></div>
-								
+								<div>
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn" role="button">اضف الى السلة</a>
+								</div>
+
 								
 							<!-- end service -->
 							</div>
