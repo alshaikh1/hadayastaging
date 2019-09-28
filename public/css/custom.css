@@ -21,7 +21,7 @@ body.seo_version .first-section h2, .first-section .lead {color:#8A83E6}
 }
 
 .main { padding: 200px 0px 0px 0px;}
-.addproducts .main {padding:0;}
+.addproducts .main {padding:0; text-align:center}
 
 .buybtn {
 	margin-top: 25px;
