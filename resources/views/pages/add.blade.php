@@ -11,84 +11,19 @@
 	
 	<div class="container">
 		@include('inc.messages')
-		
-		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/add') }}" method="POST" id="formvalid">
-		{{ csrf_field() }}
-			
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">تفاصيل المناسبة</a></li>
-				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">اختيار الهدايا</a></li>
-			</ul>
 
-		<!-- Tab panes -->
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="home">
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-right">
-						<div class="form-group">
-							<label for="occdate" class="col-sm-3 control-label">يوم الفرح الكبير</label>
-							<div class="col-sm-9">
-								<input type="date" class="form-control" id="occdate" name="occdate">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="firstname" class="col-sm-3 control-label">الاسم الاول</label>
-							<div class="col-sm-9">
-								<input type="text" name="firstname" id="firstname" class="form-control" placeholder="الاسم الاول">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">الاسم العائلة</label>
-							<div class="col-sm-9">
-								<input type="text" name="lastname" id="lastname" class="form-control" placeholder="اسم العائلة">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="emailaddress" class="col-sm-3 control-label">البريد الالكتروني</label>
-							<div class="col-sm-9">
-								<input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="البريد الالكتروني">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="mobilenumber" class="col-sm-3 control-label">رقم الهاتف</label>
-							<div class="col-sm-9">
-								<input type="number" name="mobilenumber" id="mobilenumber" class="form-control" placeholder="رقم الهاتف">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="selectoccasion" class="col-sm-3 control-label">نوع المناسبة</label>
-							<div class="col-sm-9">
-								<select name="selectoccasion" id="selectoccasion" class="form-control" data-style="btn-white">
-									<option value="زواج">زواج</option>
-									<option value="مولود">مولود جديد</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="description" class="col-sm-3 control-label">تفاصيل المناسبة</label>
-							<div class="col-sm-9">
-								<textarea type="text" rows="3" name="description" id="description" class="form-control" placeholder="تفاصيل المناسبة"></textarea>				
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="address" class="col-sm-3 control-label">عنوان التوصيل</label>
-							<div class="col-sm-9">
-								<input type="text" name="address" id="address" class="form-control" placeholder="عنوان التوصيل">
-							</div>
-						</div>
-					<!-- end col -->
-					</div>
-				<!-- end tab -->
-				</div>
-				<div role="tabpanel" class="tab-pane text-center" id="profile">
-					<div class="row">
-						<div class="col-md-3 col-sm-8 col-xs-12 text-center padd15">
-							<select onchange="Change()" id="Selected" class="form-control selectproducttype" data-style="btn-white">
-								<option value="wedding">هدايا الزواج</option>
-								<option value="baby">هدايا لمولود جديد</option>
-							</select>
-						</div>
-					</div>
-					<div id="demo">
+		<div class="row">
+			
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#" onclick="showdemo()">هدايا زواج</a></li>
+					<li><a href="#" onclick="showdemo2()>هدايا مواليد</a></li>
+				</ul>
+			<!-- end sidebar -->
+			</div>
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div id="demo">
 					@foreach ($Products as $Product)
 						@if ($Product->cat === 'wedding')
 						<div class="col-md-3 col-sm-3 col-xs-12 productslist">
@@ -150,8 +85,9 @@
 						</div>
 					@endif
 					@endforeach
-					</div>
-					<div id="demo2" style="display:none">
+				</div>
+				
+				<div id="demo2" style="display:none">
 						@foreach ($Products as $Product)
 						@if ($Product->cat === 'baby')
 						<div class="col-md-3 col-sm-3 col-xs-12 productslist">
@@ -212,12 +148,14 @@
 						</div>
 					@endif
 					@endforeach
+					<!-- end demo2-->
 					</div>
-				<!-- end tab-->
-				</div>
-			<!-- end tabcontent -->
+				
+			<!-- end col-9 -->
 			</div>
-		</form>
+		<!-- end row-->	
+		</div>
+	<!-- end container -->
 	</div>
 		
 	</div>
@@ -279,12 +217,11 @@ $('#formvalid').validate({
 </script>
 -->
 <script>
-    function Change() {
-        var CategorySelected = $('#Selected').val();
-        if (CategorySelected == 'wedding') {
+    function showdemo() {
             $('#demo').css("display", "block");
             $('#demo2').css("display", "none");
-        } else {
+        } 
+	function showdemo2() {
             $('#demo2').css("display", "block");
             $('#demo').css("display", "none");
         }
