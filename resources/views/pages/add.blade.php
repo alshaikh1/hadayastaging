@@ -26,7 +26,7 @@
 				<div id="demo">
 					@foreach ($Products as $Product)
 						@if ($Product->cat === 'wedding')
-						<div class="col-md-3 col-sm-3 col-xs-12 productslist">
+						<div class="col-md-4 col-sm-4 col-xs-12 productslist">
 							<div class="service-widget">
 								<div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
 									<a href="#" id="morebutton{{ $Product->id }}" data-toggle="modal" data-target="#modal{{ $Product->id }}">
@@ -89,7 +89,7 @@
 					<div id="demo2" style="display:none">
 						@foreach ($Products as $Product)
 						@if ($Product->cat === 'baby')
-						<div class="col-md-3 col-sm-3 col-xs-12 productslist">
+						<div class="col-md-4 col-sm-4 col-xs-12 productslist">
 							<div class="service-widget">
 								<div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
 									<a href="#" id="morebutton{{ $Product->id }}" data-toggle="modal" data-target="#modal{{ $Product->id }}">
