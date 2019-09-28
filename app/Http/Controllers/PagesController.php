@@ -254,7 +254,7 @@ class PagesController extends Controller
  
 			session()->put('cart', $cart);
  
-			return redirect()->back()->with('success', 'Product added to cart successfully!');
+			return redirect()->back()->with('success', 'تمت اضافة المنتج الى السلة بنجاح!');
 		}
  
         // if cart not empty then check if this product exist then increment quantity
@@ -264,7 +264,7 @@ class PagesController extends Controller
  
 			session()->put('cart', $cart);
  
-			return redirect()->back()->with('success', 'Product added to cart successfully!');
+			return redirect()->back()->with('success', 'تمت اضافة المنتج الى السلة بنجاح!');
  
 		}
  
@@ -280,7 +280,7 @@ class PagesController extends Controller
 		}
 		session()->put('cart', $cart);
  
-		return redirect()->back()->with('success', 'Product added to cart successfully!');
+		return redirect()->back()->with('success', 'تمت اضافة المنتج الى السلة بنجاح!');
 		//return view('pages.add', ['Products' => $Products])->with('title', $title);
         
     }

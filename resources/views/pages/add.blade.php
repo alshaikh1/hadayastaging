@@ -7,13 +7,14 @@
 		<p class="lead">اختر الهدايا التي ترغب بها</p>
 	</div>
 	
+	
+	
 	<div class="container">
+		@include('inc.messages')
 		
 		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/add') }}" method="POST" id="formvalid">
 		{{ csrf_field() }}
-		
-		
-		
+			
 			<ul class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">تفاصيل المناسبة</a></li>
 				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">اختيار الهدايا</a></li>

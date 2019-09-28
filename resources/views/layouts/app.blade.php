@@ -52,7 +52,6 @@
 	<header class="header header_style_01">	
 		@include('inc.navbar')
 	</header>
-			@include('inc.messages')
             @yield('content')
     <!-- end #home -->
 	
