@@ -238,15 +238,16 @@ class PagesController extends Controller
 		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->get();
         // if cart is empty then this the first product
 		if(!$cart) {
- 
-			$cart = [
+			foreach ($Product as $oneProduct) {
+				$cart = [
 					$id => [
-						"name" => $Product->productname,
-						"price" => $Product->productprice,
-						"description" => $Product->productdescription,
-						"merchant" => $Product->merchantname
+						"name" => $oneProduct->productname,
+						"price" => $oneProduct->productprice,
+						"description" => $oneProduct->productdescription,
+						"merchant" => $oneProduct->merchantname
 					]
-			];
+				];
+			}
  
 			session()->put('cart', $cart);
  
@@ -265,13 +266,14 @@ class PagesController extends Controller
 		}
  
         // if item not exist in cart then add to cart with quantity = 1
-		$cart[$id] = [
-			"name" => $Product->productname,
-			"price" => $Product->productprice,
-			"description" => $Product->productdescription,
-			"merchant" => $Product->merchantname
-		];
- 
+		foreach ($Product as $oneProduct) {
+			$cart[$id] = [
+				"name" => $oneProduct->productname,
+				"price" => $oneProduct->productprice,
+				"description" => $oneProduct->productdescription,
+				"merchant" => $oneProduct->merchantname
+			];
+		}
 		session()->put('cart', $cart);
  
 		return redirect()->back()->with('success', 'Product added to cart successfully!');
