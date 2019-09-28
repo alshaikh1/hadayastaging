@@ -39,6 +39,7 @@ class PagesController extends Controller
 	
 	public function add(){
         $title = 'اضافة مناسبة';
+		$success = '';
 		$Products = DB::table('hd_products')->get();
         return view('pages.add', ['Products' => $Products])->with('title', $title);
     }
