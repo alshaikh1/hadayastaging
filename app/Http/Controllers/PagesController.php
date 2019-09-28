@@ -41,7 +41,7 @@ class PagesController extends Controller
         $title = 'اضافة مناسبة';
 		$success = '';
 		$Products = DB::table('hd_products')->get();
-        return view('pages.add', ['Products' => $Products])->with('title', $title);
+        return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
 	public function occasionconfirmation(Request $request){
