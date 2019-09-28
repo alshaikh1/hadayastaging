@@ -112,7 +112,7 @@
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>					
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
 								<div>
-									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn" role="button">اضف الى السلة</a>
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 
 								
@@ -175,7 +175,7 @@
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
 								<div>
-									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn" role="button">اضف الى السلة</a>
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 
 							<!-- end service -->
@@ -216,9 +216,6 @@
 				<!-- end tab-->
 				</div>
 			<!-- end tabcontent -->
-			</div>
-			<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
-				<button class="btn btn-light btn-radius btn-brd grd1 effect-1" type="submit">حفظ</button>
 			</div>
 		</form>
 	</div>
