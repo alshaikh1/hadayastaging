@@ -20,6 +20,7 @@
 						<li><a href="{{ secure_url('/faqs') }}" class="{{ (request()->is('faqs')) ? 'active' : '' }}">الاسئلة الشائعة</a></li>
 						<li><a href="{{ secure_url('/about') }}" class="{{ (request()->is('about')) ? 'active' : '' }}">عن الموقع</a></li>
                         <li><a href="{{ secure_url('/contact') }}" class="{{ (request()->is('contact')) ? 'active' : '' }}">اتصل بنا</a></li>
+						<li><a href="{{ secure_url('/cart') }}" class="{{ (request()->is('contact')) ? 'active' : '' }}">السلة</a></li>
                     </ul>
                 </div>
             </div>

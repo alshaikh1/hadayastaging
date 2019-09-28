@@ -8,7 +8,7 @@
 	</div>
 	
 	<div class="container">
-		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/occasionconfirmation') }}" method="POST" id="formvalid">
+		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/add') }}" method="POST" id="formvalid">
 		{{ csrf_field() }}
 			<ul class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">تفاصيل المناسبة</a></li>
@@ -111,6 +111,10 @@
 										<input type="checkbox" id="addproduct{{ $Product->id }}" value="{{ $Product->id }}" name="addproductcheckbox[]"> اضافة
 									</label>
 								</div>
+								
+								<div><input type="submit" value="اضف الى السلة" class="btn"></div>
+								
+								
 							<!-- end service -->
 							</div>
 							<div class="modal fade bs-example-modal-lg" id="modal{{ $Product->id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

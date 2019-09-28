@@ -210,7 +210,6 @@ class PagesController extends Controller
 		$adminemailaddress = 'support@ribbonate.com';
 		$emailaddress = $request->input('emailaddress');
 		$emailaddressforoccasion = $occ_emailaddress;
-				
 		
 		Mail::to($adminemailaddress)->send(new SendMailAdmin($orderdata));
 		Mail::to($emailaddress)->send(new SendMailable($data));
@@ -225,4 +224,19 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
+	
+	public function cart(){
+        $title = 'السلة';
+        return view('pages.viewcart')->with('title', $title);
+    }
+	
+	public function addToCart(Request $request){
+		dd($request);
+        $title = 'اضافة مناسبة';
+		$Products = DB::table('hd_products')->get();
+        return view('pages.add', ['Products' => $Products])->with('title', $title);
+    }
+	
+	
+	
 }
