@@ -26,6 +26,7 @@
 				<div id="demo">
 					@foreach ($Products as $Product)
 						@if ($Product->cat === 'wedding')
+						<div class="row">
 						<div class="col-md-3 col-sm-3 col-xs-12 productslist">
 							<div class="service-widget">
 								<div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
@@ -83,8 +84,10 @@
 							</div>
 						<!-- end col -->
 						</div>
+						
 					@endif
 					@endforeach
+					</div>
 				</div>
 				
 				<div id="demo2" style="display:none">
