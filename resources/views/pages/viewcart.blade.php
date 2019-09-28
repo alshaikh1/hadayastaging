@@ -4,7 +4,6 @@
 <div class="section wb main">
 	<div class="section-title text-center">
 		<h3>سلة الشراء</h3>
-		<p class="lead">سلة الشراء سلة الشراء</p>
 	</div>
 		
 	<div class="container">
