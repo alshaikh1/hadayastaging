@@ -245,7 +245,9 @@ class PagesController extends Controller
 						"name" => $oneProduct->productname,
 						"price" => $oneProduct->productprice,
 						"description" => $oneProduct->productdescription,
-						"merchant" => $oneProduct->merchantname
+						"merchant" => $oneProduct->merchantname,
+						"quantity" => 1,
+
 					]
 				];
 			}
@@ -272,7 +274,8 @@ class PagesController extends Controller
 				"name" => $oneProduct->productname,
 				"price" => $oneProduct->productprice,
 				"description" => $oneProduct->productdescription,
-				"merchant" => $oneProduct->merchantname
+				"merchant" => $oneProduct->merchantname,
+				"quantity" => 1,
 			];
 		}
 		session()->put('cart', $cart);
