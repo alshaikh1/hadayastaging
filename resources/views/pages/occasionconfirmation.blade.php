@@ -13,7 +13,7 @@
 		رابط تفاصيل مناسبتك هو:
 		<b>
 		<a href="https://hadaya.herokuapp.com/eventdetails/{{ $thisoccasionid }}">		
-		https://hadaya.herokuapp.com/eventdetails/{{ $thisoccasionid }}</a></b>
+		https://www.ribbonate.com/eventdetails/{{ $thisoccasionid }}</a></b>
 		</p>
 		<div class="padding15">
 			<h4 class="subtitle">بامكانك مشاركة الرابط من خلال:</h4>

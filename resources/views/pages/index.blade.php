@@ -13,46 +13,19 @@
 						انشئ قائمة هدايا مجانية وشاركها مع أفراد العائلة و أصدقائك و زملاء العمل</p>
 						<div class="row">
 							<div class="col-lg-6 col-sm-6 col-xs-12 my-lg-10">
-								<a href="/search" class="btn btn-light btn-radius btn-brd ban-btn mb-5">ابحث عن مناسبات</a>
+								<a href="/search" class="btn btn-light btn-radius btn-brd ban-btn mb-5 srchbtn">ابحث عن مناسبات</a>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<a href="/add" class="btn btn-light btn-radius btn-brd ban-btn">ادخل مناسبتك</a>
+								<a href="/add" class="btn btn-light btn-radius btn-brd ban-btn addbtn">ادخل مناسبتك</a>
 							</div>
 						</div>
                     </div>
                 </div>
-
-                <div class="app_iphone_02 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <img src="images/rocket.png" alt="" class="img-responsive">
-                </div>
+                
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
 	
-	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
-        <path d="M-5 100 Q 0 20 5 100 Z
-            M0 100 Q 5 0 10 100
-            M5 100 Q 10 30 15 100
-            M10 100 Q 15 10 20 100
-            M15 100 Q 20 30 25 100
-            M20 100 Q 25 -10 30 100
-            M25 100 Q 30 10 35 100
-            M30 100 Q 35 30 40 100
-            M35 100 Q 40 10 45 100
-            M40 100 Q 45 50 50 100
-            M45 100 Q 50 20 55 100
-            M50 100 Q 55 40 60 100
-            M55 100 Q 60 60 65 100
-            M60 100 Q 65 50 70 100
-            M65 100 Q 70 20 75 100
-            M70 100 Q 75 45 80 100
-            M75 100 Q 80 30 85 100
-            M80 100 Q 85 20 90 100
-            M85 100 Q 90 50 95 100
-            M90 100 Q 95 25 100 100
-            M95 100 Q 100 15 105 100 Z">
-        </path>
-    </svg>
 <div id="about" class="section wb nopadtop">
         <div class="container">
             
@@ -178,7 +151,7 @@
             <div class="row text-center stat-wrap">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1">
-						<i class="flaticon-briefcase"></i>
+						<i class="fa fa-home" aria-hidden="true"></i>
 					</span>
                     <p class="stat_count">475</p>
                     <h3>عريس وعروس</h3>
@@ -186,7 +159,7 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1">
-						<i class="flaticon-happy"></i>
+						<i class="fa fa-child" aria-hidden="true"></i>
 					</span>
                     <p class="stat_count">382</p>
                     <h3>مولود</h3>
@@ -194,7 +167,7 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1">
-						<i class="flaticon-idea"></i>
+						<i class="fa fa-gift" aria-hidden="true"></i>
 					</span>
                     <p class="stat_count">3781</p>
                     <h3>هدية تم استلامها</h3>
@@ -202,7 +175,7 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1">
-						<i class="flaticon-customer-service"></i>
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
 					</span>
                     <p class="stat_count">238</p>
                     <h3>مناسبة بانتظار مشاركتك</h3>
@@ -276,50 +249,6 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
-
-    <div id="support" class="section db">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>من أين نحضر الهدايا</h3>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div id="logo-carousel" class="owl-carousel">
-					<div> <img src="images/logo_01.png" alt=""> </div>
-					<div> <img src="images/logo_02.png" alt=""> </div>
-					<div> <img src="images/logo_03.png" alt=""> </div>
-					<div> <img src="images/logo_04.png" alt=""> </div>
-					<div> <img src="images/logo_05.png" alt=""> </div>
-					<div> <img src="images/logo_06.png" alt=""> </div>
-					<div> <img src="images/logo_01.png" alt=""> </div>
-					<div> <img src="images/logo_02.png" alt=""> </div>
-				</div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <svg id="clouds1" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
-        <path d="M-5 100 Q 0 20 5 100 Z
-            M0 100 Q 5 0 10 100
-            M5 100 Q 10 30 15 100
-            M10 100 Q 15 10 20 100
-            M15 100 Q 20 30 25 100
-            M20 100 Q 25 -10 30 100
-            M25 100 Q 30 10 35 100
-            M30 100 Q 35 30 40 100
-            M35 100 Q 40 10 45 100
-            M40 100 Q 45 50 50 100
-            M45 100 Q 50 20 55 100
-            M50 100 Q 55 40 60 100
-            M55 100 Q 60 60 65 100
-            M60 100 Q 65 50 70 100
-            M65 100 Q 70 20 75 100
-            M70 100 Q 75 45 80 100
-            M75 100 Q 80 30 85 100
-            M80 100 Q 85 20 90 100
-            M85 100 Q 90 50 95 100
-            M90 100 Q 95 25 100 100
-            M95 100 Q 100 15 105 100 Z">
-        </path>
-    </svg>
+	
+	<hr>
 @endsection

@@ -5,9 +5,14 @@ body {direction:rtl}
 /** ADD YOUR AWESOME CODES HERE **/
 
 .first-section {
-	background-image:url('../images/parallax_12.jpg');	
+	background-image:url('../images/parallax_12.jpg');
+	/*background:url('../images/slider-bg.jpg') no-repeat;
+	background-position: 20% center;
+	background-size: auto;*/	
+	margin-bottom: 30px;
 }
 
+body.seo_version .first-section h2, .first-section .lead {color:#8A83E6}
 .topnavbar {background: #ccc; padding: 3px 10px;overflow:hidden;}
 
 .contentbox {
@@ -32,7 +37,16 @@ body.seo_version .copyrights {padding:15px 0;}
         width: 100%;  /* The width is the width of the web page */
 }
 
-.header_style_01 .navbar-default .navbar-nav > li a.active, .header_style_01 .navbar-default .navbar-nav > li a:hover {background-color: #685281;}
+/*
+body.seo_version .first-section h2, .big-tagline p.lead {color:#8A83E3;}
+.big-tagline .btn-light.ban-btn {background: #634C9E !important}
+*/
+
+.header_style_01 {background: #FBFAFB}
+.header_style_01 .navbar-default .navbar-nav > li a {color:#3563AD}
+.header_style_01 .navbar-default .navbar-nav > li a.active, .header_style_01 .navbar-default .navbar-nav > li a:hover {background-color: #9897DD;}
+
+body.seo_version .lead strong, body.seo_version .icon-wrapper:hover a, body.seo_version a:hover, body.seo_version a:focus {color:#9897DD;}
 
 .padd15 {padding:0 15px 15px 0;}
 .padding15 {padding:15px;}
@@ -41,6 +55,36 @@ body.seo_version .copyrights {padding:15px 0;}
 .row.padd15 {margin-right:0; margin-left:0}
 .martop15 {margin-top:15px;}
 body.seo_version .app_iphone_02 {left:0% !important}
+
+
+body.seo_version .big-tagline .btn-light.ban-btn.addbtn {background:#3563AD}
+body.seo_version .big-tagline .ban-btn.ban-btn.srchbtn {background:#B160A3}
+
+body.seo_version .cac, 
+body.seo_version .btn-buy,
+body.seo_version .btn-buy .icon_wrap {
+	background:#4BCAEB;
+}
+
+body.seo_version .cac:hover, 
+body.seo_version .icon_wrap, 
+body.seo_version .btn-buy:hover,
+body.seo_version .icon_wrap:hover,
+body.seo_version .grd1 {
+	background:#3563AD;
+}
+
+body.seo_version .stat-wrap p, 
+body.seo_version .testimonial h3,
+body.seo_version .testimonial h3 i
+{color:#3563AD}
+
+body.seo_version .desc {background:#FBFAFB}
+
+body.seo_version .message-box h2, body.seo_version .section .section-title h3 {color:#3563AD}
+
+.footer .widget-title h3 {color:#685281}
+
 
 .contact_form .list-group {margin-bottom:10px; text-align:right;}
 .list-group-item>.badge {float:left}
@@ -90,8 +134,11 @@ th {text-align:right}
 .post-media img {width:80%; margin: 0 auto;}
 .modalimg img {margin: 0 auto;}
 
+.social-md li a.fb:hover {background:#3b579d}
+body.seo_version .footer a:hover {color:#B160A3}
+
 body.seo_version .seo-services img {padding:5px}
-.greencolor {color:#685281}
+.greencolor {color:#B160A3}
 h4.modal-title {position: static; padding:0;}
 .testi-meta {font-size:25px; text-align: center; direction:rtl; margin-top:0;}
 .testimonials .section-title {margin-bottom:20px;}
@@ -100,6 +147,7 @@ h4.modal-title {position: static; padding:0;}
 	.productslist {margin-bottom: 20px;}
 	.service-widget {padding:0 15px;}
 	body.seo_version .btn-light.ban-btn {width:100%;margin-bottom:10px;}
+	.first-section {background: none;}
 }
 @media (min-width: 768px) {
 	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 { float:right;}

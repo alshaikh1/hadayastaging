@@ -4,7 +4,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img src="{{ secure_asset('images/ribbon8-logo.png') }}" alt="">
+                            <img src="{{ secure_asset('images/ribbonate-logo.png') }}" alt="">
                         </div>
                         <p>هي الخدمة الأولى والوحيدة لمشاركة سجل الهدايا الإليكتروني في الاردن . أسست بشغف كبير لخلق خدمات مميزة وبشكل سهل وآمن وفعال لنساعدك في تلقي الهدية المناسبة والتي تعكس ذوقك الشخصي بمساهمة كل من الأقارب والأصدقاء.
 						</p>
@@ -51,8 +51,6 @@
                         </div>
                         <ul class="footer-links social-md">
                             <li><a target="_blank" class="fb" href="https://www.facebook.com/ribbonate"><i class="fa fa-facebook"></i> Facebook</a></li>
-                            <li><a class="tw" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                            <li><a class="dr" href="#"><i class="fa fa-dribbble"></i> Instagram</a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->

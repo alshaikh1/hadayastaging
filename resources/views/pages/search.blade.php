@@ -15,7 +15,7 @@
 					<input type="text" name="firstname" id="firstname" class="form-control" placeholder="الاسم الاول">
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<input type="text" name="last_name" id="last_name" class="form-control" placeholder="اسم العائلة">
+					<input type="text" name="lastname" id="lastname" class="form-control" placeholder="اسم العائلة">
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 text-center">
 					<button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Search</button>
@@ -23,12 +23,17 @@
 			</fieldset>
 		</form>		
 	</div>
+	
+	
+	
+	
+	
+	@if(!$occasions == '')
 		
-	@if(isset($occasions))
 	<div class="container">
 		<div class="row">
 		
-			<div class="table-responsive">
+			<div class="table-responsive-sm">
 				<table class="table table-striped table-hover text-right">
 					<thead>
 						<tr>
@@ -51,16 +56,23 @@
 					@endforeach
 					</tbody>
 				</table>
-			</div>
+			</div>		
+		@if(Session::has('msg'))
+			<div class="alert alert-danger" role="alert">{{ Session::get('msg') }}</div>
 		@endif
+			
+		
+			@endif
 		<!-- end row-->
+		
+		@if(!$occasions == '')
 		
 		<div class="row">
 			<div class="col-md-12 d-flex text-center">
 				{{ $occasions->links() }}
 			</div>
 		</div>
-		
+		@endif
 		
 		</div>
 	<hr class="mb-4">

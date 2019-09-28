@@ -7,8 +7,6 @@
 		<p class="lead">اختر الهدايا التي ترغب بها</p>
 	</div>
 	
-	<div class="alert alert-success" role="alert">{{ $msg }}</div>
-	
 	<div class="container">
 		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/occasionconfirmation') }}" method="POST" id="formvalid">
 		{{ csrf_field() }}
@@ -112,9 +110,6 @@
 									<label class="btn">
 										<input type="checkbox" id="addproduct{{ $Product->id }}" value="{{ $Product->id }}" name="addproductcheckbox[]"> اضافة
 									</label>
-									
-									<a class="btn" href="{{ secure_url('/addtocart/'.$Product->id) }}">add me</a>
-									
 								</div>
 							<!-- end service -->
 							</div>

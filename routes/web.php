@@ -20,11 +20,11 @@ Route::get('/hello', function () {
     //return view('welcome');
     return '<h1>Hello World</h1>';
 });
-*/
+
 Route::get('/users/{id}/{name}', function($id, $name){
     return 'This is user '.$name.' with an id of '.$id;
 });
-
+*/
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
@@ -36,6 +36,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/faqs', 'PagesController@faqs');
 //Route::get('/alreadyregistered', 'PagesController@recordexist');
 Route::post('/search', 'PagesController@search');
+//Route::post('/search', function(Request $request){ dd($request);});
+
 Route::get('/eventdetails/{id}', 'PagesController@eventdetails');
 Route::get('/purchase/{occ_id}/{product_id}', 'PagesController@purchase');
 
@@ -48,9 +50,3 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('/addtocart/{id}', 'PagesController@addtocart');
-Route::get('/cart', 'PagesController@viewcart');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

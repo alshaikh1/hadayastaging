@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Input;
+use Session;
+
 use App\Post;
 use App\OccasionProducts;
 
@@ -14,7 +16,9 @@ use Illuminate\Support\Facades\Mail;
 use App\SendMailable;
 use App\SendMailableToOcc;
 use App\SendMailAdmin;
+use App\SendMailAdminNewOccasion;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class PagesController extends Controller
 {
@@ -36,37 +40,8 @@ class PagesController extends Controller
 	public function add(){
         $title = 'اضافة مناسبة';
 		$Products = DB::table('hd_products')->get();
-		$msg = '';
-        return view('pages.add', ['Products' => $Products])->with('title', $title)->with('msg', $msg);
+        return view('pages.add', ['Products' => $Products])->with('title', $title);
     }
-	
-	public function addtocart(Request $request, $id){
-        $title = 'اضافة مناسبة';
-		$msg = 'تمت الاضافة بنجاح';
-		$Products = DB::table('hd_products')->get();
-		$cart = $request->session()->get('cart');
-		$cart[$Products[0]->id] = array(
-        "id" => $Products[0]->id,
-        "productname" => $Products[0]->productname,
-	);
-			
-		
-		$request->session()->push('cart', $cart);
-		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('msg', $msg);
-    }
-	
-	public function viewcart(Request $request){
-        $title = 'سلة';
-		//dd($request->session()->get('cart', cart));
-		dd($request->session())->get('cart');
-		
-		//return ('pages.viewcart')->with('title', $title)->with('cart', $cart);
-		
-    }
-	
-	
-	
-	
 	
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';
@@ -107,6 +82,9 @@ class PagesController extends Controller
 				DB::table('hd_occ_products')->insert($joineddata);
 			}
 		}
+		$adminemailaddress = 'support@ribbonate.com';
+		Mail::to($adminemailaddress)->send(new SendMailAdminNewOccasion($data));
+		
         return view('pages.occasionconfirmation', ['thisoccasionid' => $thisoccasionid])->with('title', $title);
     }
 	
@@ -121,21 +99,37 @@ class PagesController extends Controller
     }
 	
 	public function search(Request $request){
-        $title = "بحث";		
-		if($request !== null)
-		{        
-			$q = $request->input('firstname');
-			$occasions = DB::table('hd_occasions')->where('firstname','LIKE','%'.$q.'%')->paginate(10);
+        $title = "بحث";
+		$occasions = '';
+		$request->session()->forget('msg');
+		
+		if (($request->input('firstname') != null) || ($request->input('lastname') != null))
+		{
+			$qfirstname = $request->input('firstname');
+			$qlastname = $request->input('lastname');
+			$occasions = DB::table('hd_occasions')->where('firstname','LIKE','%'.$qfirstname.'%')->where('lastname','LIKE','%'.$qlastname.'%')->paginate(10);
+			
 			if(count($occasions) > 0)
 				return view('pages.search', ['occasions' => $occasions])->with('title', $title);
-			else 			
-				return view ('pages.search')->withMessage('No Details found. Try to search again !')->with('title', $title);
+			else {
+				Session::flash('msg', 'لا يوجد نتائج!');
+				return view ('pages.search', ['occasions' => $occasions])->with('title', $title);
+			}
+		} else 
+		{
+			return view('pages.search', ['occasions' => $occasions])->with('title', $title);
 		}
     }
-	
+		
 	public function eventdetails($id) {
 		$title = 'تفاصيل المناسبة ';
-		$occasion = Post::find($id);
+		//$occasion = Post::find($id);
+		
+		try {
+			$occasion = Post::findOrFail($id);
+			} catch (ModelNotFoundException $exception) {
+				return back()->withError($exception->getMessage())->withInput();
+		}
 		
 		$OccasionProducts = DB::table('hd_occ_products')
 			->join('hd_occasions','hd_occasions.id','hd_occ_products.occ_id')
@@ -213,7 +207,7 @@ class PagesController extends Controller
 			'productprice' => $productprice,
 		];
 		
-		$adminemailaddress = 'alshaikh.mbc@gmail.com';
+		$adminemailaddress = 'support@ribbonate.com';
 		$emailaddress = $request->input('emailaddress');
 		$emailaddressforoccasion = $occ_emailaddress;
 				

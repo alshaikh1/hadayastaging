@@ -12,13 +12,13 @@
     
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="author" content=""> 
-	<meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="author" content="">
+
     <!-- Site Icons -->
     <link rel="shortcut icon" href="{{ secure_asset('images/favicon.ico') }}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{{ secure_asset('images/apple-touch-icon.png') }}">
 
-    <title>Ribbonate</title>
+    <title>Ribbonate - {{ $title }}</title>
 	
 
     <!-- Styles -->
