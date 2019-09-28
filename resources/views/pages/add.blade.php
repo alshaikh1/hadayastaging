@@ -112,7 +112,7 @@
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>					
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
 								<div class="martop15">
-									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-light btn-radius btn-brd grd1 btn-block" role="button">اضف الى السلة</a>
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 
 								
@@ -175,7 +175,7 @@
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
 								<div class="martop15">
-									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-light btn-radius btn-brd grd1 btn-block" role="button">اضف الى السلة</a>
+									<a href="{{ secure_url('add/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 
 							<!-- end service -->
