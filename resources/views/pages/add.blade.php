@@ -17,7 +17,7 @@
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="#" onclick="showdemo()">هدايا زواج</a></li>
-					<li><a href="#" onclick="showdemo2()>هدايا مواليد</a></li>
+					<li><a href="#" onclick="showdemo2()">هدايا مواليد</a></li>
 				</ul>
 			<!-- end sidebar -->
 			</div>
