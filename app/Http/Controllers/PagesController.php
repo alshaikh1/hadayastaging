@@ -231,7 +231,8 @@ class PagesController extends Controller
     }
 	
 	public function addToCart(Request $request){
-		dd($request);
+		$checkedProducts = $request->addtocartbtn;
+		dd($checkedProducts);
         $title = 'اضافة مناسبة';
 		$Products = DB::table('hd_products')->get();
         return view('pages.add', ['Products' => $Products])->with('title', $title);

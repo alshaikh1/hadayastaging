@@ -112,7 +112,7 @@
 									</label>
 								</div>
 								
-								<div><button type="submit" class="btn">اضف الى السلة</button></div>
+								<div><button type="submit" class="btn" name="addtocartbtn[]" id="addtocart{{ $Product->id }}">اضف الى السلة</button></div>
 								
 								
 							<!-- end service -->
