@@ -225,7 +225,7 @@
 		
 	</div>
 	<hr class="mb-4">
-
+<!--
 <script>
 $(document).ready(function () {
 
@@ -279,11 +279,8 @@ $('#formvalid').validate({
     //},
 });
 });
-
-
-  
 </script>
-
+-->
 <script>
     function Change() {
         var CategorySelected = $('#Selected').val();
