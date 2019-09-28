@@ -154,62 +154,7 @@
 		
 	</div>
 	<hr class="mb-4">
-<!--
-<script>
-$(document).ready(function () {
 
-$('#formvalid').validate({
-	ignore: "",
-    rules: {
-		occdate: "required",
-		firstname: "required",
-		lastname: "required",
-		mobilenumber: {
-			required: true,
-			digits: true,
-		},
-		address: "required",
-		description: "required",		
-		
-        emailaddress: {
-            required: true,
-            email: true
-        },
-	},
-	messages: {
-		//name: "Please specify your name",
-		emailaddress: {
-			required: "الحقل مطلوب",
-			email: "البريد الالكتروني يجب ان يكون بهيئة email@domain.com",			
-		},
-		firstname: {
-			required: "الحقل مطلوب",
-		},
-		lastname: {
-			required: "الحقل مطلوب",
-		},
-		description: {
-			required: "الحقل مطلوب",
-		},
-		address: {
-			required: "الحقل مطلوب",
-		},
-		occdate: {
-			required: "الحقل مطلوب",
-		},
-		mobilenumber: {
-			required: "الحقل يجب ان يحتوي على ارقام فقط"
-		},
-	},
-	//errorElement : 'div',
-	//errorLabelContainer: '.errorTxt',
-    //highlight: function (element) {
-      //  $(element).closest('.form-group').removeClass('success').addClass('error');
-    //},
-});
-});
-</script>
--->
 <script>
     function showdemo() {
             $('#demo').css("display", "block");
@@ -219,7 +164,6 @@ $('#formvalid').validate({
             $('#demo2').css("display", "block");
             $('#demo').css("display", "none");
         }
-    }
 </script>
 
 @endsection
