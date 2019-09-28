@@ -8,6 +8,13 @@
 	</div>
 	
 	<div class="container">
+	
+	@if($success != null)
+		<div class="alert alert-success" role="alert">$success</div>
+	@endif
+		
+	
+	
 		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/add') }}" method="POST" id="formvalid">
 		{{ csrf_field() }}
 			<ul class="nav nav-tabs" role="tablist">
