@@ -155,6 +155,7 @@ h4.modal-title {position: static; padding:0;}
 .nav>li {margin-bottom:2px}
 .nav>li.active>a {background:#fff; border:1px solid #eee}
 
+.service-widget {box-shadow: none; webkit-box-shadow: none}
 
 @media (max-width: 768px) {
 	.productslist {margin-bottom: 20px;}
