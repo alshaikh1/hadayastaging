@@ -146,9 +146,6 @@ h4.modal-title {position: static; padding:0;}
 
 .sidebar {
 	position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
     z-index: 1000;
     display: block;
     padding: 20px;
