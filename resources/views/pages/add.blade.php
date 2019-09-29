@@ -83,6 +83,18 @@
 			</div>
 		<!-- end row-->	
 		</div>
+		
+		@if(!$Products == '')
+		
+		<div class="row">
+			<div class="col-md-12 d-flex text-center">
+				{{ $Products->links() }}
+			</div>
+		</div>
+		@endif
+		
+		
+		
 	<!-- end container -->
 	</div>
 		
