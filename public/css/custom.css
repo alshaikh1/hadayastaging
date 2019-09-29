@@ -148,7 +148,8 @@ h4.modal-title {position: static; padding:0;}
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: #fefefe;
+	bottom:0;
+    background-color: #fff;
     border-left: 1px solid #eee;
 }
 }
