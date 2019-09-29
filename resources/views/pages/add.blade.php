@@ -16,14 +16,14 @@
 			
 			<div class="col-sm-3 col-md-2 sidebar">
 				<div>
-					<h4>النوع</h4>
+					<h3>النوع</h3>
 					<ul class="nav nav-sidebar">				
 						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
 						<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
 					</ul>
 				</div>
 				<div class="martop15">
-					<h4>السعر</h4>
+					<h3>السعر</h3>
 					<ul class="nav nav-sidebar">				
 						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">اقل من 10</a></li>
 						<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">10 فأكثر</a></li>					
