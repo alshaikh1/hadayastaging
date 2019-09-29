@@ -21,9 +21,7 @@
 				</ul>
 			<!-- end sidebar -->
 			</div>
-			
 			<div class="col-sm-9 col-md-10 main">
-				<div id="demo">
 					@foreach ($Products as $Product)
 						<div class="col-md-4 col-sm-4 col-xs-12 productslist">
 							<div class="service-widget">
@@ -81,7 +79,6 @@
 						<!-- end col -->
 						</div>					
 					@endforeach
-					</div>					
 			<!-- end col-9 -->
 			</div>
 		<!-- end row-->	
