@@ -37,10 +37,11 @@ class PagesController extends Controller
         return view('pages.howitwork')->with('title', $title);		
     }
 	
-	public function add($producttype){
+	public function add(Request $request){
         $title = 'اضافة مناسبة';
 		$success = '';
-		$Products = DB::table('hd_products')->where('cat', '=', $producttype)->paginate(5);
+		dd($name = $request->query('cat'));
+		$Products = DB::table('hd_products')->where('cat', '=', $producttype)->paginate(10);
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
@@ -236,7 +237,7 @@ class PagesController extends Controller
 		$title = 'اضافة مناسبة';
 		
 		$cart = session()->get('cart');
-		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->paginate(5);
+		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->paginate(10);
         // if cart is empty then this the first product
 		if(!$cart) {
 			foreach ($Product as $oneProduct) {
@@ -247,7 +248,6 @@ class PagesController extends Controller
 						"description" => $oneProduct->productdescription,
 						"merchant" => $oneProduct->merchantname,
 						"quantity" => 1,
-
 					]
 				];
 			}
@@ -259,13 +259,9 @@ class PagesController extends Controller
  
         // if cart not empty then check if this product exist then increment quantity
 		if(isset($cart[$id])) {
- 
 			$cart[$id]['quantity']++;
- 
 			session()->put('cart', $cart);
- 
 			return redirect()->back()->with('success', 'تمت اضافة المنتج الى السلة بنجاح!');
- 
 		}
  
         // if item not exist in cart then add to cart with quantity = 1
