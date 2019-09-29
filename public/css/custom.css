@@ -152,7 +152,6 @@ h4.modal-title {position: static; padding:0;}
     background-color: #FBFAFB;
     border-left: 1px solid #eee;
 }
-}
 
 
 
@@ -166,5 +165,9 @@ h4.modal-title {position: static; padding:0;}
 	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 { float:right;}
 	form .service-widget {min-height:412px; max-height:412px;}
 	.navbar-header {float:right}
-	.navbar-nav>li {float: right; margin-right:10px;}	
+	.navbar-nav>li {float: right; margin-right:10px;}
+
+	.sidebar {min-height:500px;}
+
+	
 }
