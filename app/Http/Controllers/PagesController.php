@@ -37,11 +37,11 @@ class PagesController extends Controller
         return view('pages.howitwork')->with('title', $title);		
     }
 	
-	public function add(){
+	public function add($producttype){
         $title = 'اضافة مناسبة';
 		$success = '';
-		$Products = DB::table('hd_products')->get();
-        return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
+		$Products = DB::table('hd_products')->where('type', '=', 'producttype')->get();
+		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
 	public function occasionconfirmation(Request $request){
