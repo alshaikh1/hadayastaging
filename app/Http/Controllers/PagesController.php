@@ -40,7 +40,7 @@ class PagesController extends Controller
 	public function add($producttype){
         $title = 'اضافة مناسبة';
 		$success = '';
-		$Products = DB::table('hd_products')->where('type', '=', 'producttype')->get();
+		$Products = DB::table('hd_products')->where('cat', '=', $producttype)->get();
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
