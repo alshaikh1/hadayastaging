@@ -15,7 +15,7 @@
                     <ul class="nav navbar-nav navbar-left menu-top">
                         <li><a href="{{ secure_url('/') }}" class="{{ (request()->is('/')) ? 'active' : '' }}">الرئيسية</a></li>          
 						<li><a href="{{ secure_url('/search') }}" class="{{ (request()->is('search*')) || (request()->is('*eventdetails*')) || (request()->is('*purchase*')) ? 'active' : '' }}">ابحث عن مناسبات</a></li>
-                        <li><a href="{{ secure_url('/add') }}" class="{{ (request()->is('add')) ? 'active' : '' }}">مناسبتك</a></li>
+                        <li><a href="{{ secure_url('/add/wedding') }}" class="{{ (request()->is('add')) ? 'active' : '' }}">مناسبتك</a></li>
 						<li><a href="{{ secure_url('/howto') }}" class="{{ (request()->is('howto')) ? 'active' : '' }}">كيف يعمل الموقع؟</a></li>
 						<li><a href="{{ secure_url('/faqs') }}" class="{{ (request()->is('faqs')) ? 'active' : '' }}">الاسئلة الشائعة</a></li>
 						<li><a href="{{ secure_url('/about') }}" class="{{ (request()->is('about')) ? 'active' : '' }}">عن الموقع</a></li>
