@@ -16,8 +16,8 @@
 			
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
-					<li class="{{ (Request::segment(1) === 'wedding') ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
-					<li class="{{ (Request::segment(1) === 'baby') ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
+					<li class="{{ (request()->is('wedding')) ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
+					<li class="{{ (request()->is('baby')) ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
 				</ul>
 			<!-- end sidebar -->
 			</div>
