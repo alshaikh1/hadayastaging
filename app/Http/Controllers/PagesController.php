@@ -231,7 +231,7 @@ class PagesController extends Controller
         return view('pages.viewcart')->with('title', $title);
     }
 	
-	public function addToCart($id){
+	public function addToCart($productcat,$id){
 		
 		$title = 'اضافة مناسبة';
 		
