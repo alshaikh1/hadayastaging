@@ -15,18 +15,20 @@
 		<div class="row addproducts">
 			
 			<div class="col-sm-3 col-md-2 sidebar">
-				<h4>النوع</h4>
-				<ul class="nav nav-sidebar">				
-					<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
-					<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
-				</ul>
-				
-				<h4>السعر</h4>
-				<ul class="nav nav-sidebar">				
-					<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">اقل من 10</a></li>
-					<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">10 فأكثر</a></li>					
-				</ul>
-				
+				<div>
+					<h4>النوع</h4>
+					<ul class="nav nav-sidebar">				
+						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
+						<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
+					</ul>
+				</div>
+				<div class="martop15">
+					<h4>السعر</h4>
+					<ul class="nav nav-sidebar">				
+						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">اقل من 10</a></li>
+						<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">10 فأكثر</a></li>					
+					</ul>
+				</div>
 				
 			<!-- end sidebar -->
 			</div>
