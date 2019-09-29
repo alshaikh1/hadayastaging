@@ -40,8 +40,8 @@ class PagesController extends Controller
 	public function add(Request $request){
         $title = 'اضافة مناسبة';
 		$success = '';
-		dd($name = $request->query('cat'));
-		$Products = DB::table('hd_products')->where('cat', '=', $producttype)->paginate(10);
+		$cat = $request->query('cat');
+		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10);
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
@@ -55,7 +55,7 @@ class PagesController extends Controller
 		$mobilenumber = $request->input('mobilenumber');
 		$selectoccasion = $request->input('selectoccasion');
 		$address = $request->input('address');
-		$description = $request->input('description');	
+		$description = $request->input('description');
 		
 		if ($selectoccasion == 'مولود') {
 			$occimage = 'images/baby01.jpg';
