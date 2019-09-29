@@ -15,9 +15,9 @@
 		<div class="row addproducts">
 			
 			<div class="col-sm-3 col-md-2 sidebar">
-				<ul class="nav nav-sidebar">
-					<li class="{{ Request::path()->has('wedding') ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
-					<li class="{{ Request::path()->has('baby') ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
+				<ul class="nav nav-sidebar">				
+					<li class="{{ Request->query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=wedding') }}">هدايا زواج</a></li>
+					<li class="{{ Request->query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/add?cat=baby') }}">هدايا مواليد</a></li>					
 				</ul>
 			<!-- end sidebar -->
 			</div>
