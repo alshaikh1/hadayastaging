@@ -152,7 +152,7 @@ h4.modal-title {position: static; padding:0;}
     background-color: #FBFAFB;
     border-left: 1px solid #eee;
 }
-
+.nav>li.active>a {background:#fff}
 
 
 @media (max-width: 768px) {
