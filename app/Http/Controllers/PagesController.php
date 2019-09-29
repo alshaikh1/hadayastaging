@@ -41,7 +41,7 @@ class PagesController extends Controller
         $title = 'اضافة مناسبة';
 		$success = '';
 		$cat = $request->query('cat');
-		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10);
+		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page');
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
@@ -237,7 +237,7 @@ class PagesController extends Controller
 		$title = 'اضافة مناسبة';
 		
 		$cart = session()->get('cart');
-		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->paginate(10);
+		$Product = DB::table('hd_products')->where('hd_products.id', '=', $id)->get();
         // if cart is empty then this the first product
 		if(!$cart) {
 			foreach ($Product as $oneProduct) {
