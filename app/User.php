@@ -18,7 +18,6 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 	
-	$title = 'login';
 
     /**
      * The attributes that should be hidden for arrays.

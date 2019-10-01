@@ -14,6 +14,7 @@ class Post extends Model
     public $primaryKey = 'id';
     // Timestamps
     public $timestamps = true;
+	public $title = 'login';
 
     public function products(){
         //return $this->belongsTo('App\User');
