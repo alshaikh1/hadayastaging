@@ -22,6 +22,13 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class PagesController extends Controller
 {
+	public function __construct()
+{
+    $this->middleware('auth');
+}
+	
+	
+	
     public function index(){
         $title = 'الرئيسية';        
         return view('pages.index')->with('title', $title);
