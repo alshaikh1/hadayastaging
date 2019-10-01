@@ -32,11 +32,11 @@ Route::get('/services', 'PagesController@services');
 Route::get('/search', 'PagesController@search');
 //Route::get('/add', 'PagesController@add');
 
-Route::get('/add', [
+/*Route::get('/add', [
     'middleware' => 'auth',
     'uses' => 'PagesController@add'
 ]);
-
+*/
 
 Route::get('/howto', 'PagesController@howto');
 Route::get('/contact', 'PagesController@contact');
