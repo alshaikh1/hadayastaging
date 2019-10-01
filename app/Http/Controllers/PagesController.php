@@ -40,7 +40,7 @@ class PagesController extends Controller
 	
 	public function add(Request $request){
         $title = 'اضافة مناسبة';
-		$this->middleware('auth')->with('title', $title);
+		//$this->middleware('auth');
 		$success = '';
 		$cat = $request->query('cat');
 		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
