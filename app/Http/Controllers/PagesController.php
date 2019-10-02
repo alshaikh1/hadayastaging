@@ -65,7 +65,7 @@ class PagesController extends Controller
 			'firstname' => 'required',
 			'lastname' => 'required',
             //'emailaddress' => 'required|email|unique:hd_occasions, emailaddress',
-			'mobilenumber' => 'required|numeric|unique:hd_occasions, mobilenumber',
+			'mobilenumber' => 'required|numeric|unique:hd_occasions',
 			'description' => 'required',
 			'address' => 'required'
 		]);
