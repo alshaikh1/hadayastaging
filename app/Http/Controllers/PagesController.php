@@ -89,11 +89,16 @@ class PagesController extends Controller
 	}
 	
 	public function addstep2(){
-		$title = 'اضافة مناسبة';
+		if ($request->session()-get('occasion') == null)
+			return redirect('/add-step-1');
+		$title = 'اختيار الهدايا';
 		$success = '';
 		return view('pages.add-step-2')->with('title', $title);
 	}
 	
+	public function postCreateStep2(Request $request) {
+				
+	}
 	
 	
 	public function occasionconfirmation(Request $request){
