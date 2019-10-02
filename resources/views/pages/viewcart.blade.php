@@ -11,9 +11,22 @@
 		
 			
 			@php
-				$occasion = session('occasion'); 
+				$occasion = session('occasion');
 			@endphp
 				<table class="table table-striped table-hover text-right">
+					<thead>
+					<tr>
+						<td>تاريخ المناسبة</td>
+						<td>الاسم الأول</td>
+						<td>اسم العائلة</td>
+						<td>البريد الالكتروني</td>
+						<td>رقم الهاتف</td>
+						<td>نوع المناسبة</td>
+						<td>الوصف</td>
+						<td>عنوان التوصيل</td>
+					</tr>
+					</thead>
+					<tbody>
 					<tr>
 						<td>{{ $occasion['occdate'] }}</td>
 						<td>{{ $occasion['firstname'] }}</td>
@@ -24,6 +37,7 @@
 						<td>{{ $occasion['description'] }}</td>
 						<td>{{ $occasion['address'] }}</td>
 					</tr>
+					</tbody>
 				</table>
 			
 		</div>
