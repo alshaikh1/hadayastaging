@@ -92,6 +92,8 @@ class PagesController extends Controller
 		
 		if($request->query('cat') == null)
 			$cat = 'wedding';
+		else $cat = $request->query('cat');
+		
 		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
 		return view('pages.addstep2', ['Products' => $Products])->with('title', $title)->with('success', $success);
 	}
