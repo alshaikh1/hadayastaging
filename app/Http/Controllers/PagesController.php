@@ -277,7 +277,7 @@ class PagesController extends Controller
 		return view('pages.confirmation')->with('title', 'تأكيد الطلب');
 	}
 	
-	public function cart(){
+	public function cart(Request $request){
         $title = 'السلة';
 		if ($request->session()->get('occasion') == null)
 			return redirect('/addstep1');
