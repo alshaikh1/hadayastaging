@@ -11,7 +11,7 @@
 			@foreach(session('occasion') as $ids => $occasion)
 				<table class="table table-striped table-hover text-right">
 					<tr>
-						<td>{{ $occasion=>occdate }}</td>
+						<td>{{ $occasion->occdate }}</td>
 						<td>{{ $occasion['firstname'] }}</td>
 						<td>{{ $occasion['lastname'] }}</td>
 						<td>{{ $occasion['emailaddress'] }}</td>
