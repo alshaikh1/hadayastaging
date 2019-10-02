@@ -8,7 +8,7 @@
 		
 	<div class="container">
 		<div class="row">
-			@foreach(session('occasion') as $occasion)
+			@foreach(session('occasion') as $ids => $occasion)
 				<table>
 					<tr>
 						<td>{{ $occasion['occdate'] }}</td>
