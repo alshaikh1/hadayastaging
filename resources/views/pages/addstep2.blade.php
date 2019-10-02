@@ -48,7 +48,7 @@
 								<p>{{ str_limit($Product->productdescription, $limit = 51, $end = '...') }}</p>					
 								<a href="Javascript:Void(0);" id="morebutton{{ $Product->id }}" type="button" data-toggle="modal" data-target="#modal{{ $Product->id }}">المزيد</a>
 								<div class="martop15">
-									<a href="{{ secure_url('add/'.$Product->cat.'/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
+									<a href="{{ secure_url('addstep2/'.$Product->cat.'/'.$Product->id) }}" class="btn btn-primary btn-block" role="button">اضف الى السلة</a>
 								</div>
 							<!-- end service -->
 							</div>
