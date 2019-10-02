@@ -97,7 +97,9 @@
 		</div>
 		@endif
 		
-		
+		<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
+					<a href="addstep3" class="btn btn-light btn-radius btn-brd grd1 effect-1">التالي</a>
+		</div>
 		
 	<!-- end container -->
 	</div>
