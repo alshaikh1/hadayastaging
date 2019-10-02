@@ -30,7 +30,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::get('/search', 'PagesController@search');
-Route::get('/add-step-1', 'PagesController@addstep1');
+Route::get('/addstep1', 'PagesController@addstep1');
 Route::post('/addstep1', 'PagesController@postCreateStep1');
 Route::get('/addstep2', 'PagesController@addstep2');
 
