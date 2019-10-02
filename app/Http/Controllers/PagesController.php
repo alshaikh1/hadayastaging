@@ -46,6 +46,40 @@ class PagesController extends Controller
 		return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
+	public function addstep1(){
+        $title = 'اضافة مناسبة';
+		$success = '';
+		//$cat = $request->query('cat');
+		$product = $request->session()->get('occasion');
+		return view('pages.create-step1');
+		//$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
+		//return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
+    }
+	
+	public function postCreateStep1(Request $request){
+		$validatedData = $request->validate([
+            'firstname' => 'required',
+			'lastname' => 'required',
+            'emailaddress' => 'required|email',
+        ]);
+
+        if(empty($request->session()->get('occasion'))){
+            //$occasion = new Product();
+            $occasion->fill($validatedData);
+            $request->session()->put('occasion', $occasion);
+        }else{
+            $occasion = $request->session()->get('occasion');
+            $occasion->fill($validatedData);
+            $request->session()->put('occasion', $occasion);
+        }
+		
+		dd($request->session()->get('occasion'));
+		
+		
+        return redirect('/addstep2');
+	}
+	
+	
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';
 		
