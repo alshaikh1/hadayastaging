@@ -67,10 +67,15 @@ class PagesController extends Controller
 		]);
 		
 		$occasionOwner = [
+			'occdate' => $request->occdate,
 			'firstname' => $request->firstname,
 			'lastname' => $request->lastname,
-			'emailaddress' => $request->emailaddress
-		]
+			'emailaddress' => $request->emailaddress,
+			'mobilenumber' => $request->mobilenumber,
+			'selectoccasion' => $request->selectoccasion,
+			'description' => $request->description,
+			'address' => $request->address,
+		];
 		
 
         if(empty($request->session()->get('occasion'))){
