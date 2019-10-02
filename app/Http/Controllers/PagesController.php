@@ -94,8 +94,6 @@ class PagesController extends Controller
 		$title = 'اختيار الهدايا';
 		$success = '';
 		
-		dd($request->query('cat'));
-		
 		if($request->query('cat') == null)
 			$cat = 'wedding';
 		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
