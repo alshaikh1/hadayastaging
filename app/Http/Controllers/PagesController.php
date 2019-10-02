@@ -18,7 +18,8 @@ use App\SendMailableToOcc;
 use App\SendMailAdmin;
 use App\SendMailAdminNewOccasion;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Validator;
+
 
 class PagesController extends Controller
 {
