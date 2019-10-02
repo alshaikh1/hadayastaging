@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Input;
 use Session;
 use Validator;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers;
 
 
 use App\Post;
