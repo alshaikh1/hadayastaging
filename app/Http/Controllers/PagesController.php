@@ -89,7 +89,7 @@ class PagesController extends Controller
 	}
 	
 	public function addstep2(Request $request){
-		if ($request->session()-get('occasion') == null)
+		if ($request->session()->get('occasion') == null)
 			return redirect('/add-step-1');
 		$title = 'اختيار الهدايا';
 		$success = '';
