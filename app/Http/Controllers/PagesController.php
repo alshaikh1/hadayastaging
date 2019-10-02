@@ -85,13 +85,13 @@ class PagesController extends Controller
 		
 		$request->session()->put('occasion', $occasionOwner);
         
-		return redirect('/addstep2');
+		return redirect('/add-step-2');
 	}
 	
 	public function addstep2(){
 		$title = 'اضافة مناسبة';
 		$success = '';
-		return view('pages.addstep2')->with('title', $title);
+		return view('pages.add-step-2')->with('title', $title);
 	}
 	
 	
