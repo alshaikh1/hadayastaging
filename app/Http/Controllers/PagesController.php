@@ -18,8 +18,6 @@ use App\SendMailableToOcc;
 use App\SendMailAdmin;
 use App\SendMailAdminNewOccasion;
 use Carbon\Carbon;
-use Validator;
-
 
 class PagesController extends Controller
 {
@@ -58,7 +56,7 @@ class PagesController extends Controller
     }
 	
 	public function postCreateStep1(Request $request){
-		$validatedData = $request->validate([
+		$validatedData = $this->validate([
             'firstname' => 'required',
 			'lastname' => 'required',
             'emailaddress' => 'required|email',
