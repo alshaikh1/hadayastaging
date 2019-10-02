@@ -9,20 +9,23 @@
 	<div class="container">
 		<div class="row">
 		
-			@foreach(session('occasion') as $occasionn)
+			
+			@php
+				$occasion = session('occasion'); 
+			@endphp
 				<table class="table table-striped table-hover text-right">
 					<tr>
-						<td>{{ $occasionn['occdate'] }}</td>
-						<td>{{ $occasionn['firstname'] }}</td>
-						<td>{{ $occasionn['lastname'] }}</td>
-						<td>{{ $occasionn['emailaddress'] }}</td>
-						<td>{{ $occasionn['mobilenumber'] }}</td>
-						<td>{{ $occasionn['selectoccasion'] }}</td>
-						<td>{{ $occasionn['description'] }}</td>
-						<td>{{ $occasionn['address'] }}</td>
+						<td>{{ $occasion['occdate'] }}</td>
+						<td>{{ $occasion['firstname'] }}</td>
+						<td>{{ $occasion['lastname'] }}</td>
+						<td>{{ $occasion['emailaddress'] }}</td>
+						<td>{{ $occasion['mobilenumber'] }}</td>
+						<td>{{ $occasion['selectoccasion'] }}</td>
+						<td>{{ $occasion['description'] }}</td>
+						<td>{{ $occasion['address'] }}</td>
 					</tr>
 				</table>
-			@endforeach
+			
 		</div>
 	
 		<div class="row">

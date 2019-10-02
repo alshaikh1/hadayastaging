@@ -279,6 +279,8 @@ class PagesController extends Controller
 	
 	public function cart(){
         $title = 'السلة';
+		if ($request->session()->get('occasion') == null)
+			return redirect('/addstep1');
         return view('pages.viewcart')->with('title', $title);
     }
 	
