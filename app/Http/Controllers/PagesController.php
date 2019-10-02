@@ -76,7 +76,7 @@ class PagesController extends Controller
             $request->session()->put('occasion', $occasion);
         }
 		
-		dd($request->session()->get('occasion'));
+		dd($occasion);
 		
 		
         return redirect('/addstep2');
