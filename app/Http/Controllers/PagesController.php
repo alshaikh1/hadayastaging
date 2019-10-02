@@ -60,11 +60,12 @@ class PagesController extends Controller
 	
 	public function postCreateStep1(Request $request){
 		
-		$validatedData = $request->validate([
-            'firstname' => 'required',
+		$validatedData = $this->validate($request, [
+			'firstname' => 'required',
 			'lastname' => 'required',
             'emailaddress' => 'required|email',
-        ]);
+		]);
+
 
         if(empty($request->session()->get('occasion'))){
             //$occasion = new Product();
