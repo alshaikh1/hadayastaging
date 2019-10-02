@@ -59,10 +59,7 @@ class PagesController extends Controller
     }
 	
 	public function postCreateStep1(Request $request){
-		
-		dd($request->firstname);
-		
-		
+				
 		$validatedData = $this->validate($request, [
 			'firstname' => 'required',
 			'lastname' => 'required',
@@ -72,7 +69,7 @@ class PagesController extends Controller
 		dd($validatedData);
 
         if(empty($request->session()->get('occasion'))){
-            $occasion = $validatedData;
+            $occasion = $fill(validatedData);
             $request->session()->put('occasion', $occasion);
         }else{
             $occasion = $request->session()->get('occasion');
