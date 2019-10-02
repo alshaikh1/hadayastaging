@@ -51,11 +51,7 @@ class PagesController extends Controller
 	public function addstep1(){
         $title = 'اضافة مناسبة';
 		$success = '';
-		//$cat = $request->query('cat');
-		//$product = $request->session()->get('occasion');
 		return view('pages.addstep1')->with('title', $title);
-		//$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
-		//return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
     }
 	
 	public function postCreateStep1(Request $request){
