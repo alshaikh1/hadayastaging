@@ -8,6 +8,25 @@
 		
 	<div class="container">
 		<div class="row">
+			@foreach(session('occasion') as $occasion)
+				<table>
+					<tr>
+						<td>{{ $occasion['occdate'] }}</td>
+						<td>{{ $occasion['firstname'] }}</td>
+						<td>{{ $occasion['lastname'] }}</td>
+						<td>{{ $occasion['emailaddress'] }}</td>
+						<td>{{ $occasion['mobilenumber'] }}</td>
+						<td>{{ $occasion['selectoccasion'] }}</td>
+						<td>{{ $occasion['description'] }}</td>
+						<td>{{ $occasion['address'] }}</td>
+					</tr>
+				</table>
+			@endforeach
+		</div>
+	
+	
+	
+		<div class="row">
 		
 			<div class="table-responsive-sm">
 				<table class="table table-striped table-hover text-right">
