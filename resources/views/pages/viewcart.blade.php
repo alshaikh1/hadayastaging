@@ -9,10 +9,10 @@
 	<div class="container">
 		<div class="row">
 		
-			@foreach(session('occasion') as $occasion)
+			@foreach(session('occasion') as $ids => $occasion)
 				<table class="table table-striped table-hover text-right">
 					<tr>
-						
+						<td>{{ $occasion['occdate'] }}</td>
 						<td>{{ $occasion['firstname'] }}</td>
 						<td>{{ $occasion['lastname'] }}</td>
 						<td>{{ $occasion['emailaddress'] }}</td>
@@ -25,10 +25,7 @@
 			@endforeach
 		</div>
 	
-	
-	
 		<div class="row">
-		
 			<div class="table-responsive-sm">
 				<table class="table table-striped table-hover text-right">
 					<thead>
