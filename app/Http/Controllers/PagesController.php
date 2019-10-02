@@ -50,7 +50,7 @@ class PagesController extends Controller
         $title = 'اضافة مناسبة';
 		$success = '';
 		//$cat = $request->query('cat');
-		$product = $request->session()->get('occasion');
+		//$product = $request->session()->get('occasion');
 		return view('pages.create-step1');
 		//$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
 		//return view('pages.add', ['Products' => $Products])->with('title', $title)->with('success', $success);
