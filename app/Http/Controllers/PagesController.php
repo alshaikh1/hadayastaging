@@ -60,6 +60,9 @@ class PagesController extends Controller
 	
 	public function postCreateStep1(Request $request){
 		
+		dd($request->firstname);
+		
+		
 		$validatedData = $this->validate($request, [
 			'firstname' => 'required',
 			'lastname' => 'required',
