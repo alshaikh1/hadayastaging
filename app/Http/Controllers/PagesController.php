@@ -66,18 +66,23 @@ class PagesController extends Controller
             'emailaddress' => 'required|email',
 		]);
 		
-		dd($request);
+		$occasionOwner = [
+			'firstname' => $request->firstname,
+			'lastname' => $request->lastname,
+			'emailaddress' => $request->emailaddress
+		]
+		
 
         if(empty($request->session()->get('occasion'))){
-            $occasion = $fill(validatedData);
+            $occasion = $fill($occasionOwner);
             $request->session()->put('occasion', $occasion);
         }else{
             $occasion = $request->session()->get('occasion');
-            $occasion->fill($validatedData);
+            $occasion->fill($occasionOwner);
             $request->session()->put('occasion', $occasion);
         }
 		
-		dd($occasion);
+		dd($request->session()->get('occasion'));
 		
 		
         return redirect('/addstep2');
