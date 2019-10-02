@@ -8,6 +8,10 @@
 		
 	<div class="container">
 		<div class="row">
+		
+		<?php dd(session('occasion'));
+		?>
+		
 			@foreach(session('occasion') as $occasion)
 				<table class="table table-striped table-hover text-right">
 					<tr>
