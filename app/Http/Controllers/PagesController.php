@@ -77,15 +77,16 @@ class PagesController extends Controller
 			'address' => $request->address,
 		];
 		
+		$request->session()->flush();
 
-        if(empty($request->session()->get('occasion'))){
-            $occasion = $fill($occasionOwner);
-            $request->session()->put('occasion', $occasion);
-        }else{
+
+        //if(empty($request->session()->get('occasion'))){
+            $request->session()->put('occasion', $occasionOwner);
+        /*}else{
             $occasion = $request->session()->get('occasion');
             $occasion->fill($occasionOwner);
             $request->session()->put('occasion', $occasion);
-        }
+        }*/
 		
 		dd($request->session()->get('occasion'));
 		
