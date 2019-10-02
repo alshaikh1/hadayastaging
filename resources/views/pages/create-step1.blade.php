@@ -9,7 +9,7 @@
 		
 	<div class="container">
 		@include('inc.messages')
-		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/create-step1') }}" method="POST">
+		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/add-step-1') }}" method="POST">
 		{{ csrf_field() }}
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-right">
