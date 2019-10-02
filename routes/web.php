@@ -31,8 +31,8 @@ Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::get('/search', 'PagesController@search');
 Route::get('/add-step-1', 'PagesController@addstep1');
-Route::post('/add-step-1', 'PagesController@postCreateStep1');
-Route::get('/add-step-2', 'PagesController@addstep2');
+Route::post('/addstep1', 'PagesController@postCreateStep1');
+Route::get('/addstep2', 'PagesController@addstep2');
 
 Route::get('/howto', 'PagesController@howto');
 Route::get('/contact', 'PagesController@contact');
