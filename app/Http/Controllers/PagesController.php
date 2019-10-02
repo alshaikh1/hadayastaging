@@ -64,8 +64,8 @@ class PagesController extends Controller
 			'occdate' => 'required|date',
 			'firstname' => 'required',
 			'lastname' => 'required',
-            'emailaddress' => 'required|email|exists:hd_occasions,emailaddress',
-			'mobilenumber' => 'required|numeric',
+            'emailaddress' => 'required|email|exists:hd_occasions, emailaddress',
+			'mobilenumber' => 'required|numeric|exists:hd_occasions, mobilenumber',
 			'description' => 'required',
 			'address' => 'required'
 		]);
