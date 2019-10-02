@@ -65,7 +65,8 @@ class PagesController extends Controller
 			'lastname' => 'required',
             'emailaddress' => 'required|email',
 		]);
-
+		
+		dd($validatedData);
 
         if(empty($request->session()->get('occasion'))){
             $occasion = $validatedData;
