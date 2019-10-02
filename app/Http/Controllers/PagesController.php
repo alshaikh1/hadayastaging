@@ -68,8 +68,7 @@ class PagesController extends Controller
 
 
         if(empty($request->session()->get('occasion'))){
-            //$occasion = new Product();
-            $occasion->fill($validatedData);
+            $occasion = $validatedData;
             $request->session()->put('occasion', $occasion);
         }else{
             $occasion = $request->session()->get('occasion');
