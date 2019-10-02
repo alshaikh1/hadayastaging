@@ -16,14 +16,14 @@
 				<table class="table table-striped table-hover text-right">
 					<thead>
 					<tr>
-						<td>تاريخ المناسبة</td>
-						<td>الاسم الأول</td>
-						<td>اسم العائلة</td>
-						<td>البريد الالكتروني</td>
-						<td>رقم الهاتف</td>
-						<td>نوع المناسبة</td>
-						<td>الوصف</td>
-						<td>عنوان التوصيل</td>
+						<th>تاريخ المناسبة</th>
+						<th>الاسم الأول</th>
+						<th>اسم العائلة</th>
+						<th>البريد الالكتروني</th>
+						<th>رقم الهاتف</th>
+						<th>نوع المناسبة</th>
+						<th>الوصف</th>
+						<th>عنوان التوصيل</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -69,10 +69,14 @@
 					@endif
 					</tbody>
 				</table>
-			</div>		
-		
-		
+			</div>
 		</div>
+		
+		<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
+			<a href="addstep1" class="btn btn-light btn-radius btn-brd grd1 effect-1">حفظ</a>
+			<a href="addstep1" class="btn btn-light btn-radius btn-brd grd1 effect-1">إلغاء</a>
+		</div>
+		
 	<hr class="mb-4">
 	</div>
 	
