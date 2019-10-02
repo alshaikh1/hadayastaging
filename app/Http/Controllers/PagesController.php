@@ -85,15 +85,15 @@ class PagesController extends Controller
 		
 		$request->session()->put('occasion', $occasionOwner);
         
-		//
+		//return redirect('/add-step-2');
 	}
 	
 	public function addstep2(Request $request){
 		if ($request->session()->get('occasion') == null)
-			return redirect('/add-step-1');
+			return redirect('/addstep1');
 		$title = 'اختيار الهدايا';
 		$success = '';
-		return view('pages.add-step-2')->with('title', $title);
+		return view('pages.addstep2')->with('title', $title);
 	}
 	
 	public function postCreateStep2(Request $request) {
