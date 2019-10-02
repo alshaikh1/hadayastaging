@@ -93,11 +93,15 @@ class PagesController extends Controller
 			return redirect('/addstep1');
 		$title = 'اختيار الهدايا';
 		$success = '';
-		return view('pages.addstep2')->with('title', $title);
+		
+		if($request->query('cat') == null)
+			$cat = $request->query('cat');
+		$Products = DB::table('hd_products')->where('cat', '=', $cat)->paginate(10)->appends(request()->except('page'));
+		return view('pages.addstep2', ['Products' => $Products])->with('title', $title)->with('success', $success);
 	}
 	
 	public function postCreateStep2(Request $request) {
-				
+		
 	}
 	
 	
