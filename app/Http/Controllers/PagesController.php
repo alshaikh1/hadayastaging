@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Input;
 use Session;
 use Validator;
+use App\Http\Controllers\Controller
+
 
 use App\Post;
 use App\OccasionProducts;
