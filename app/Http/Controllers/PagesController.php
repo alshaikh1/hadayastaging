@@ -61,9 +61,11 @@ class PagesController extends Controller
 	public function postCreateStep1(Request $request){
 				
 		$validatedData = $this->validate($request, [
+			'occdate' => 'required|date',
 			'firstname' => 'required',
 			'lastname' => 'required',
-            'emailaddress' => 'required|email',
+            'emailaddress' => 'required|email|exists:hd_occasions',
+			'mobilenumber' => 'required|numeric'
 		]);
 		
 		$occasionOwner = [
@@ -78,20 +80,10 @@ class PagesController extends Controller
 		];
 		
 		$request->session()->flush();
-
-
-        //if(empty($request->session()->get('occasion'))){
-            $request->session()->put('occasion', $occasionOwner);
-        /*}else{
-            $occasion = $request->session()->get('occasion');
-            $occasion->fill($occasionOwner);
-            $request->session()->put('occasion', $occasion);
-        }*/
 		
-		dd($request->session()->get('occasion'));
-		
-		
-        return redirect('/addstep2');
+		$request->session()->put('occasion', $occasionOwner);
+        
+		return redirect('/addstep2');
 	}
 	
 	
