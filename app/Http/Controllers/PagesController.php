@@ -106,7 +106,9 @@ class PagesController extends Controller
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';
 		
-		$occasion = $request->session()->occasion;
+		$occasion = session()->get('occasion');
+		if ($occasion == null) 
+			redirect(secure_url('addstep1'));
 		
 		if ($occasion->selectoccasion == 'مولود') {
 			$occimage = 'images/baby01.jpg';
