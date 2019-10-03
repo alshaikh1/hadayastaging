@@ -46,7 +46,7 @@ Route::get('/eventdetails/{id}', 'PagesController@eventdetails');
 Route::get('/purchase/{occ_id}/{product_id}', 'PagesController@purchase');
 
 Route::post('/thankyou/{occ_id}/{productid}', 'PagesController@email');
-Route::post('/occasionconfirmation', 'PagesController@occasionconfirmation');
+Route::get('/occasionconfirmation', 'PagesController@occasionconfirmation');
 Route::get('/cart', 'PagesController@cart');
 Route::get('/addstep3', 'PagesController@cart');
 
