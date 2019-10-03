@@ -15,13 +15,38 @@
 		<div class="row addproducts">
 			
 			<div class="col-sm-3 col-md-2 sidebar">
-				<div>
+				<div class="row">
 					<h3>النوع</h3>
 					<ul class="nav nav-sidebar">				
 						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/addstep2?cat=wedding') }}">هدايا زواج</a></li>
 						<li class="{{ Request::query('cat') == 'baby' ? 'active' : '' }}"><a href="{{ secure_url('/addstep2?cat=baby') }}">هدايا مواليد</a></li>					
 					</ul>
 				</div>
+				
+				<div class="row">
+					<table class="table table-striped table-hover text-right">
+						<thead>
+							<tr>
+								<th class="text-right">اسم المنتج</th>
+								<th class="text-right">السعر</th>
+								<th class="text-right">الكمية</th>
+							</tr>
+						</thead>
+						<tbody>
+						@if(session('cart'))
+							@foreach(session('cart') as $id => $details)
+							<tr>
+								<td>{{ $details['name'] }}</td>
+								<td>{{ $details['price'] }} دينار</td>
+								<td>{{ $details['quantity'] }}</td>
+							</tr>
+							@endforeach
+						@endif
+						</tbody>
+					</table>
+				</div>
+				
+				
 				
 			<!-- end sidebar -->
 			</div>
