@@ -81,7 +81,7 @@ class PagesController extends Controller
 		
 		$request->session()->put('occasion', $occasionOwner);
         
-		return redirect('/addstep2');
+		return redirect(secure_url('/addstep2'));
 	}
 	
 	public function addstep2(Request $request){
