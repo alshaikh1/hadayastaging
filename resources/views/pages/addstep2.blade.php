@@ -30,7 +30,6 @@
 						<thead>
 							<tr>
 								<th class="text-right">اسم المنتج</th>
-								<th class="text-right">السعر</th>
 								<th class="text-right">الكمية</th>
 								<th class="text-right">حذف</th>
 							</tr>
@@ -39,21 +38,18 @@
 						
 							@foreach(session('cart') as $id => $details)
 							<tr>
-								<td>{{ $details['name'] }}</td>
-								<td>{{ $details['price'] }} دينار</td>
+								<td>{{ $details['name'] }}</td>								
 								<td>{{ $details['quantity'] }}</td>
 								<td><a href="remove">X</td>
 							</tr>
 							@endforeach
 						@else 
-							<h3>لم يتم اختيار هدايا بعد</h3>
+							<h4>لم يتم اختيار هدايا بعد</h4>
 						@endif
 						
 						</tbody>
 					</table>
 				</div>
-				
-				
 				
 			<!-- end sidebar -->
 			</div>
