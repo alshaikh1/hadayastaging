@@ -159,7 +159,7 @@
  
 			var ele = $(this);
  
-			if(confirm("Are you sure")) {
+			if(confirm("هل أنت متأكد؟")) {
 				$.ajax({
 					url: '{{ secure_url('remove-from-cart') }}',
 					method: "DELETE",
