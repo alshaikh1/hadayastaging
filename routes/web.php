@@ -33,6 +33,7 @@ Route::get('/search', 'PagesController@search');
 Route::get('/addstep1', 'PagesController@addstep1');
 Route::post('/addstep1', 'PagesController@postCreateStep1');
 Route::get('/addstep2', 'PagesController@addstep2');
+Route::delete('/remove-from-cart', 'PagesController@removeFromCart');
 
 Route::get('/howto', 'PagesController@howto');
 Route::get('/contact', 'PagesController@contact');

@@ -233,7 +233,6 @@ class PagesController extends Controller
 			$occ_type = $oneOcc->type;
 			$occ_date = $oneOcc->occdate;
 			$occ_emailaddress = $oneOcc->emailaddress;
-			
 		}
 		
 		$orderdata = [
@@ -330,9 +329,19 @@ class PagesController extends Controller
  
 		return redirect()->back()->with('success', 'تمت اضافة المنتج الى السلة بنجاح!');
 		//return view('pages.add', ['Products' => $Products])->with('title', $title);
-        
     }
 	
-	
+	public function removeFromCart(Request $request)
+	{
+		if($request->id) {
+			$cart = session()->get('cart');
+			if(isset($cart[$request->id])) {
+				unset($cart[$request->id]);
+				session()->put('cart', $cart);
+			}
+ 
+			session()->flash('success', 'Product removed successfully');
+		}
+	}
 	
 }
