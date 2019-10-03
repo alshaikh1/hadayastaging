@@ -134,7 +134,6 @@ class PagesController extends Controller
 		$thisoccasionid = $thisoccasion->id;
 		
 		$cart = session()->get('cart');
-		dd($cart);
 		//foreach ($cart as $oneCart) {
 		foreach($cart as $id=>$oneCart) {
 			$ids = $oneCart['id'];
@@ -323,6 +322,7 @@ class PagesController extends Controller
         // if item not exist in cart then add to cart with quantity = 1
 		foreach ($Product as $oneProduct) {
 			$cart[$id] = [
+				"id" => $oneProduct->id,
 				"name" => $oneProduct->productname,
 				"price" => $oneProduct->productprice,
 				"description" => $oneProduct->productdescription,
