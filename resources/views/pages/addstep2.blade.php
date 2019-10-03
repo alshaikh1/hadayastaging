@@ -15,7 +15,7 @@
 		<div class="row addproducts">
 			
 			<div class="col-sm-3 col-md-2 sidebar">
-				<div class="row">
+				<div class="row sidebarelement">
 					<h3>النوع</h3>
 					<ul class="nav nav-sidebar">				
 						<li class="{{ Request::query('cat') == 'wedding' ? 'active' : '' }}"><a href="{{ secure_url('/addstep2?cat=wedding') }}">هدايا زواج</a></li>
@@ -23,7 +23,7 @@
 					</ul>
 				</div>
 				
-				<div class="row">
+				<div class="row sidebarelement">
 					<table class="table table-striped table-hover text-right">
 						<thead>
 							<tr>
