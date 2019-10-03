@@ -340,7 +340,7 @@ class PagesController extends Controller
 				session()->put('cart', $cart);
 			}
  
-			session()->flash('success', 'Product removed successfully');
+			session()->flash('success', 'تم ازالة المنتج من سلة الهدايا!');
 		}
 	}
 	
