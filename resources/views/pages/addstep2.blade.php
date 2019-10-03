@@ -24,7 +24,8 @@
 				</div>
 				
 				<div class="row sidebarelement">
-				<h3>الهدايا</h3>
+				<h3>سلة الهدايا</h3>
+				@if(session('cart'))
 					<table class="table table-striped table-hover text-right">
 						<thead>
 							<tr>
@@ -35,17 +36,17 @@
 							</tr>
 						</thead>
 						<tbody>
-						@if(session('cart'))
+						
 							@foreach(session('cart') as $id => $details)
 							<tr>
 								<td>{{ $details['name'] }}</td>
 								<td>{{ $details['price'] }} دينار</td>
 								<td>{{ $details['quantity'] }}</td>
-								<td><a href="remove">X </td>
+								<td><a href="remove">X</td>
 							</tr>
 							@endforeach
 						@else 
-							<h3>السلة فارغة</h3>
+							<h3>لم يتم اختيار هدايا بعد</h3>
 						@endif
 						
 						</tbody>
