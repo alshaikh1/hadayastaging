@@ -137,11 +137,8 @@
 		
 	</div>
 	<hr class="mb-4">
-@endsection
-
-@section('scripts')
- 
-    <script type="text/javascript">
+	
+	    <script type="text/javascript">
  
         $(".update-cart").click(function (e) {
            e.preventDefault();
@@ -177,5 +174,8 @@
  
     </script>
  
+
+	
+	
 @endsection
 
