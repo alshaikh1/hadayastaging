@@ -106,42 +106,42 @@ class PagesController extends Controller
 	public function occasionconfirmation(Request $request){
         $title = 'تمت الاضافة بنجاح';
 		
-		$occdate = $request->input('occdate');
-		$firstname = $request->input('firstname');
-		$lastname = $request->input('lastname');
-		$emailaddress = $request->input('emailaddress');
-		$mobilenumber = $request->input('mobilenumber');
-		$selectoccasion = $request->input('selectoccasion');
-		$address = $request->input('address');
-		$description = $request->input('description');
+		$occasion = $request->session()->occasion;
 		
-		if ($selectoccasion == 'مولود') {
+		if ($occasion->selectoccasion == 'مولود') {
 			$occimage = 'images/baby01.jpg';
 		} else {
 			$occimage = 'images/wedding01.jpg';
 		}
 		
+		$occdate = $occasion->occdate;
+		$firstname = $occasion->firstname;
+		$lastname = $occasion->lastname;
+		$emailaddress = $occasion->emailaddress;
+		$mobilenumber = $occasion->mobilenumber;
+		$selectoccasion = $occasion->selectoccasion;
+		$address = $occasion->address;
+		$description = $occasion->description;
+		
 		$data=array('firstname'=>$firstname,"lastname"=>$lastname,"occdate"=>$occdate,"emailaddress"=>$emailaddress,'mobilenumber'=>$mobilenumber,'type'=>$selectoccasion,'deliveryaddress'=>$address,'expired'=>'0','occimage'=>$occimage,'description'=>$description);
 		
-		$recordExist = DB::table('hd_occasions')->where('emailaddress','=',$emailaddress)->get();
-		
-		if ($recordExist->count() != 0) {
-			return view('pages.recordexist', ['emailaddress' => $emailaddress])->with('title', 'البريد الالكتروني مسجل مسبقاُ');
-		}
-				
 		DB::table('hd_occasions')->insert($data);
 
 		$thisoccasion = DB::table('hd_occasions')->where('firstname','=',$firstname)->where('lastname','=',$lastname)->where('mobilenumber','=',$mobilenumber)->where('deliveryaddress','=',$address)->where('emailaddress','=',$emailaddress)->where('description','=',$description)->where('occdate','=',$occdate)->first();
 		
 		$thisoccasionid = $thisoccasion->id;
 		
-		$checkedProducts = $request->addproductcheckbox;
-		if ($checkedProducts != null) {
-			foreach($checkedProducts as $checkedProduct=>$value) {
+		$cart = session()->get('cart');
+		
+		foreach ($cart as $oneCart) {
+			$joineddata = array('occ_id'=>$thisoccasionid, 'product_id'=>$oneCart->id);
+			DB::table('hd_occ_products')->insert($joineddata);
+		}
+			/*foreach($checkedProducts as $checkedProduct=>$value) {
 				$joineddata = array('occ_id'=>$thisoccasionid, 'product_id'=>$value);
 				DB::table('hd_occ_products')->insert($joineddata);
-			}
-		}
+			}*/
+		
 		$adminemailaddress = 'support@ribbonate.com';
 		Mail::to($adminemailaddress)->send(new SendMailAdminNewOccasion($data));
 		
