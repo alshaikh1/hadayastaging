@@ -8,7 +8,7 @@
 		
 	<div class="container">
 		<div class="row">
-		<h4>معلومات المناسبة</h4>
+		<h3>معلومات المناسبة</h3>
 			
 			@php
 				$occasion = session('occasion');
@@ -43,7 +43,7 @@
 		</div>
 	
 		<div class="row">
-		<h4>قائمة الهدايا</h4>
+		<h3>قائمة الهدايا</h3>
 			<div class="table-responsive-sm">
 				<table class="table table-striped table-hover text-right">
 					<thead>
