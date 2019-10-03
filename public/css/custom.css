@@ -145,7 +145,6 @@ h4.modal-title {position: static; padding:0;}
 .testimonials .section-title {margin-bottom:20px;}
 
 .sidebar {
-    padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
 	bottom:0;
@@ -154,6 +153,8 @@ h4.modal-title {position: static; padding:0;}
 .sidebar .sidebarelement {
 	background-color: #FBFAFB;
 	border-left: 1px solid #eee;
+	padding:20px;
+	margin-bottom:15px;
 }
 
 
