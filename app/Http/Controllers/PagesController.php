@@ -110,7 +110,9 @@ class PagesController extends Controller
 		if ($occasion == null) 
 			redirect(secure_url('addstep1'));
 		
-		if ($occasion->selectoccasion == 'مولود') {
+		dd($occasion['firstname']);
+		
+		if ($occasion['selectoccasion'] == 'مولود') {
 			$occimage = 'images/baby01.jpg';
 		} else {
 			$occimage = 'images/wedding01.jpg';
