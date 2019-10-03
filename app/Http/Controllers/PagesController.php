@@ -110,22 +110,20 @@ class PagesController extends Controller
 		if ($occasion == null) 
 			redirect(secure_url('addstep1'));
 		
-		dd($occasion['firstname']);
-		
 		if ($occasion['selectoccasion'] == 'مولود') {
 			$occimage = 'images/baby01.jpg';
 		} else {
 			$occimage = 'images/wedding01.jpg';
 		}
 		
-		$occdate = $occasion->occdate;
-		$firstname = $occasion->firstname;
-		$lastname = $occasion->lastname;
-		$emailaddress = $occasion->emailaddress;
-		$mobilenumber = $occasion->mobilenumber;
-		$selectoccasion = $occasion->selectoccasion;
-		$address = $occasion->address;
-		$description = $occasion->description;
+		$occdate = $occasion['occdate'];
+		$firstname = $occasion['firstname'];
+		$lastname = $occasion['lastname'];
+		$emailaddress = $occasion['emailaddress'];
+		$mobilenumber = $occasion['mobilenumber'];
+		$selectoccasion = $occasion['selectoccasion'];
+		$address = $occasion['address'];
+		$description = $occasion['description'];
 		
 		$data=array('firstname'=>$firstname,"lastname"=>$lastname,"occdate"=>$occdate,"emailaddress"=>$emailaddress,'mobilenumber'=>$mobilenumber,'type'=>$selectoccasion,'deliveryaddress'=>$address,'expired'=>'0','occimage'=>$occimage,'description'=>$description);
 		
