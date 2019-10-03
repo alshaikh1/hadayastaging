@@ -74,8 +74,8 @@
 		</div>
 		
 		<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
-			<a href="addstep1" class="btn btn-light btn-radius btn-brd grd1 effect-1">حفظ</a>
-			<a href="addstep1" class="btn btn-light btn-radius btn-brd grd1 effect-1">إلغاء</a>
+			<a href="{{ secure_url('addstep1') }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">حفظ</a>
+			<a href="{{ secure_url('addstep1') }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">إلغاء</a>
 		</div>
 		
 	<hr class="mb-4">
