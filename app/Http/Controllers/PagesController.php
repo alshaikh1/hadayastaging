@@ -136,8 +136,7 @@ class PagesController extends Controller
 		$cart = session()->get('cart');
 		
 		foreach ($cart as $oneCart) {
-			dd($oneCart['id']);
-			$joineddata = array('occ_id'=>$thisoccasionid, 'product_id'=>$oneCart->id);
+			$joineddata = array('occ_id'=>$thisoccasionid, 'product_id'=>$oneCart['id']);
 			DB::table('hd_occ_products')->insert($joineddata);
 		}
 			/*foreach($checkedProducts as $checkedProduct=>$value) {
