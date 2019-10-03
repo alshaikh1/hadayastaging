@@ -24,6 +24,7 @@
 				</div>
 				
 				<div class="row sidebarelement">
+				<h3>الهدايا</h3>
 					<table class="table table-striped table-hover text-right">
 						<thead>
 							<tr>
@@ -43,7 +44,10 @@
 								<td><a href="remove">X </td>
 							</tr>
 							@endforeach
+						@else 
+							<h3>السلة فارغة</h3>
 						@endif
+						
 						</tbody>
 					</table>
 				</div>
