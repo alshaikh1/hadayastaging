@@ -134,7 +134,7 @@ class PagesController extends Controller
 		$thisoccasionid = $thisoccasion->id;
 		
 		$cart = session()->get('cart');
-		
+		dd($cart);
 		//foreach ($cart as $oneCart) {
 		foreach($cart as $id=>$oneCart) {
 			$ids = $oneCart['id'];
