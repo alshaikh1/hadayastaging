@@ -4,6 +4,30 @@
 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d698cea16b81b0012138a6e&product=inline-share-buttons" async="async"></script>
 
+<div class="container">
+		<div class="f1-steps">
+			<div class="f1-progress">
+				<div class="f1-progress-line" data-now-value="100" data-number-of-steps="4" style="width: 100%;"></div>
+			</div>
+			<div class="f1-step activated">
+				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
+				<p>تفاصيل المناسبة</p>
+			</div>
+			<div class="f1-step activated">
+				<div class="f1-step-icon"><i class="fa fa-gift"></i></div>
+				<p>اختيار الهدايا</p>
+			</div>
+			<div class="f1-step activated">
+				<div class="f1-step-icon"><i class="fa fa-eye"></i></div>
+				<p>معاينة</p>
+			</div>
+			<div class="f1-step active">
+				<div class="f1-step-icon"><i class="fa fa-check"></i></div>
+				<p>تأكيد</p>
+			</div>
+		</div>
+	</div>
+
 <div class="section wb main">
 	<div class="section-title text-center">
 		<h3>شكرا لك لثقتك بنا</h3>
