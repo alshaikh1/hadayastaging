@@ -15,15 +15,19 @@
 			</div>
 			<div class="f1-step active">
 				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
-				<p>about</p>
+				<p>تفاصيل المناسبة</p>
 			</div>
 			<div class="f1-step">
 				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
-				<p>account</p>
+				<p>اختيار الهدايا</p>
 			</div>
 			<div class="f1-step">
 				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
-				<p>social</p>
+				<p>معاينة</p>
+			</div>
+			<div class="f1-step">
+				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+				<p>تأكيد</p>
 			</div>
 		</div>
 	</div>

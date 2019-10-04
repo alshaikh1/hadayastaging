@@ -168,12 +168,12 @@ h4.modal-title {position: static; padding:0;}
 .f1-progress { position: absolute; top: 24px; right: 0; width: 100%; height: 1px; background: #ddd; }
 .f1-progress-line { position: absolute; top: 0; right: 0; height: 1px; background: #f35b3f; }
 
-.f1-step { position: relative; float: right; width: 33.333333%; padding: 0 5px; }
+.f1-step { position: relative; float: right; width: 25%; padding: 0 5px; }
 
 .f1-step-icon {
 	display: inline-block; width: 40px; height: 40px; margin-top: 4px; background: #ddd;
 	font-size: 16px; color: #fff; line-height: 40px;
-	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; text-align:center;
 }
 .f1-step.activated .f1-step-icon {
 	background: #fff; border: 1px solid #f35b3f; color: #f35b3f; line-height: 38px;
