@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="f1-steps">
 			<div class="f1-progress">
-				<div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+				<div class="f1-progress-line" data-now-value="25" data-number-of-steps="4" style="width: 25%;"></div>
 			</div>
 			<div class="f1-step activated">
 				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
