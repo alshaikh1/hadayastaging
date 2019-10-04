@@ -17,15 +17,15 @@
 				<p>تفاصيل المناسبة</p>
 			</div>
 			<div class="f1-step active">
-				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
+				<div class="f1-step-icon"><i class="fa fa-gift"></i></div>
 				<p>اختيار الهدايا</p>
 			</div>
 			<div class="f1-step">
-				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+				<div class="f1-step-icon"><i class="fa fa-eye"></i></div>
 				<p>معاينة</p>
 			</div>
 			<div class="f1-step">
-				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+				<div class="f1-step-icon"><i class="fa fa-check"></i></div>
 				<p>تأكيد</p>
 			</div>
 		</div>
