@@ -7,6 +7,29 @@
 		<p class="lead">اختر الهدايا التي ترغب بها</p>
 	</div>
 	
+	<div class="container">
+		<div class="f1-steps">
+			<div class="f1-progress">
+				<div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+			</div>
+			<div class="f1-step activated">
+				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
+				<p>تفاصيل المناسبة</p>
+			</div>
+			<div class="f1-step active">
+				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
+				<p>اختيار الهدايا</p>
+			</div>
+			<div class="f1-step">
+				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+				<p>معاينة</p>
+			</div>
+			<div class="f1-step">
+				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+				<p>تأكيد</p>
+			</div>
+		</div>
+	</div>
 	
 	
 	<div class="container">
