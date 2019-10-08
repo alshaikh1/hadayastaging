@@ -104,7 +104,7 @@
 		{{ csrf_field() }}
 		<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
 			<button class="btn btn-light btn-radius btn-brd grd1 effect-1" type="submit">حفظ</a>
-			<a href="{{ secure_url('addstep1') }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">إلغاء</a>
+			<button class="btn btn-light btn-radius btn-brd grd1 effect-1" type="button" href="{{ secure_url('addstep1') }}">إلغاء</button>
 		</div>
 		</form>
 		
