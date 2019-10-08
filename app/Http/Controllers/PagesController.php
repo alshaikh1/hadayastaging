@@ -86,7 +86,7 @@ class PagesController extends Controller
 	
 	public function addstep2(Request $request){
 		if ($request->session()->get('occasion') == null)
-			return redirect('/addstep1');
+			return redirect(secure_url('/addstep1'));
 		$title = 'اختيار الهدايا';
 		$success = '';
 		
@@ -144,7 +144,8 @@ class PagesController extends Controller
 		$adminemailaddress = 'support@ribbonate.com';
 		Mail::to($adminemailaddress)->send(new SendMailAdminNewOccasion($data));
 		$request->session()->flush();
-        return view('pages.occasionconfirmation', ['thisoccasionid' => $thisoccasionid])->with('title', $title);
+		return redirect(secure_url('/addstep1'), ['thisoccasionid' => $thisoccasionid])->with('title', $title);
+        //return view('pages.occasionconfirmation', ['thisoccasionid' => $thisoccasionid])->with('title', $title);
     }
 	
 	public function faqs(){
