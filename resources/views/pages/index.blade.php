@@ -13,10 +13,10 @@
 						انشئ قائمة هدايا مجانية وشاركها مع أفراد العائلة و أصدقائك و زملاء العمل</p>
 						<div class="row">
 							<div class="col-lg-6 col-sm-6 col-xs-12 my-lg-10">
-								<a href="/search" class="btn btn-light btn-radius btn-brd ban-btn mb-5 srchbtn">ابحث عن مناسبات</a>
+								<a href="{{ secure_url('/search') }}" class="btn btn-light btn-radius btn-brd ban-btn mb-5 srchbtn">ابحث عن مناسبات</a>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<a href="/add" class="btn btn-light btn-radius btn-brd ban-btn addbtn">ادخل مناسبتك</a>
+								<a href="{{ secure_url('/addstep1') }}" class="btn btn-light btn-radius btn-brd ban-btn addbtn">ادخل مناسبتك</a>
 							</div>
 						</div>
                     </div>
@@ -74,7 +74,7 @@
     </div><!-- end section -->	
 	
 	<section class="section nopad cac text-center">
-        <a href="{{ secure_url('/add') }}"><h3>
+        <a href="{{ secure_url('/addstep1') }}"><h3>
 		 لديك مناسبة قريبة وتبحث عن هدية مميزة؟ أنشئ قائمة هدايا مجانية اليوم وشاركها مع اصدقاؤك</h3></a>
     </section>
 	

@@ -98,12 +98,8 @@ class PagesController extends Controller
 		return view('pages.addstep2', ['Products' => $Products])->with('title', $title)->with('success', $success);
 	}
 	
-	public function postCreateStep2(Request $request) {
-		
-	}
 	
-	
-	public function occasionconfirmation(Request $request){
+	public function postcart(Request $request){
         $title = 'تمت الاضافة بنجاح';
 		
 		$occasion = session()->get('occasion');
@@ -147,7 +143,7 @@ class PagesController extends Controller
 		
 		$adminemailaddress = 'support@ribbonate.com';
 		Mail::to($adminemailaddress)->send(new SendMailAdminNewOccasion($data));
-		
+		$request->session()->flush();
         return view('pages.occasionconfirmation', ['thisoccasionid' => $thisoccasionid])->with('title', $title);
     }
 	

@@ -35,7 +35,7 @@
                         <ul class="footer-links">
                             <li><a href="{{ secure_url('/') }}">الرئيسية</a></li>
                             <li><a href="{{ secure_url('/search') }}">ابحث عن مناسبات</a></li>
-                            <li><a href="{{ secure_url('/add') }}">ادخل مناسبتك</a></li>
+                            <li><a href="{{ secure_url('/addstep1') }}">ادخل مناسبتك</a></li>
 							<li><a href="{{ secure_url('/howto') }}">كيف يعمل الموقع؟</a></li>
 							<li><a href="{{ secure_url('/faqs') }}">الاسئلة الشائعة</a></li>
 							<li><a href="{{ secure_url('/about') }}">عن الموقع</a></li>

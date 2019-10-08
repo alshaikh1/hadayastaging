@@ -100,11 +100,13 @@
 				</table>
 			</div>
 		</div>
-		
+		<form class="needs-validation form-horizontal" novalidate="" action="{{ secure_url('/cart') }}" method="POST">
+		{{ csrf_field() }}
 		<div class="buybtn col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="clear:both">
-			<a href="{{ secure_url('occasionconfirmation') }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">حفظ</a>
+			<button class="btn btn-light btn-radius btn-brd grd1 effect-1" type="submit">حفظ</a>
 			<a href="{{ secure_url('addstep1') }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">إلغاء</a>
 		</div>
+		</form>
 		
 	<hr class="mb-4">
 	

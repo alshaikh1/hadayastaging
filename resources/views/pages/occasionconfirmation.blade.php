@@ -36,12 +36,12 @@
 		<p>
 		رابط تفاصيل مناسبتك هو:
 		<b>
-		<a href="https://hadaya.herokuapp.com/eventdetails/{{ $thisoccasionid }}">		
+		<a href="https://www.ribbonate.com/eventdetails/{{ $thisoccasionid }}">		
 		https://www.ribbonate.com/eventdetails/{{ $thisoccasionid }}</a></b>
 		</p>
 		<div class="padding15">
 			<h4 class="subtitle">بامكانك مشاركة الرابط من خلال:</h4>
-			<div class="sharethis-inline-share-buttons" data-url="https://hadaya.herokuapp.com/eventdetails/{{ $thisoccasionid }}" data-title="نسعد بهداياكم ومشاركتكم فرحتنا"></div>
+			<div class="sharethis-inline-share-buttons" data-url="https://www.ribbonate.com/eventdetails/{{ $thisoccasionid }}" data-title="نسعد بهداياكم ومشاركتكم فرحتنا"></div>
 		</div>
 		<p class="lead">
 		اذا كانت لديك أسئلة أو استفسارات،
