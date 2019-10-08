@@ -144,7 +144,7 @@ class PagesController extends Controller
 		$adminemailaddress = 'support@ribbonate.com';
 		Mail::to($adminemailaddress)->send(new SendMailAdminNewOccasion($data));
 		$request->session()->flush();
-		return redirect(secure_url('/addstep1'), ['thisoccasionid' => $thisoccasionid])->with('title', $title);
+		return redirect(secure_url('/occasionconfirmation'), ['thisoccasionid' => $thisoccasionid])->with('title', $title);
         //return view('pages.occasionconfirmation', ['thisoccasionid' => $thisoccasionid])->with('title', $title);
     }
 	
